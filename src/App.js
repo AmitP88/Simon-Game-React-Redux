@@ -3,12 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 import LightsSquare from './components/LightsSquare';
+import Controls from './components/Controls';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <LightsSquare />
+        <div className="gamepad">
+          <LightsSquare />
+          <Controls />        
+        </div>
       </div>
     );
   }

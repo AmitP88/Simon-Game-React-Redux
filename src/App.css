@@ -21,6 +21,7 @@ html {
   }
 } */
 
+/* Gamepad */
 .LightsSquare-container {
   margin-top: 10%;
 }
@@ -61,4 +62,14 @@ html {
   transform: rotate(180deg); 
   margin: 0 auto;
   margin-left: 0;
+}
+
+/* Control Box*/
+.Controls {
+  width: 220px;
+  height: 220px;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  bottom: 410px;
 }
