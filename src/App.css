@@ -21,6 +21,10 @@ html {
   }
 } */
 
+.LightsSquare-container {
+  margin-top: 10%;
+}
+
 .topHalf, .bottomHalf {
   display: flex;
 }
@@ -33,20 +37,28 @@ html {
 }
 
 .red {
-	border-bottom: 300px solid rgb(255,0,153);
+  border-bottom: 300px solid rgb(255,0,153);
+  margin: 0 auto;
+  margin-right: 0;
 }
 
 .green {
 	border-bottom: 300px solid rgb(0, 255, 64);
   transform: rotate(90deg);
+  margin: 0 auto;
+  margin-left: 0;
 }
 
 .blue {
 	border-bottom: 300px solid rgb(0, 247, 255);
   transform: rotate(270deg);
+  margin: 0 auto;
+  margin-right: 0;
 }
 
 .purple {
 	border-bottom: 300px solid rgb(140, 0, 255);
   transform: rotate(180deg); 
+  margin: 0 auto;
+  margin-left: 0;
 }
