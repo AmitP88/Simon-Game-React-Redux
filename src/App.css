@@ -38,27 +38,27 @@ html {
 }
 
 .red {
-  border-bottom: 300px solid rgb(255,0,153);
+  border-bottom: 300px solid rgb(175, 0, 105);
   margin: 0 auto;
   margin-right: 0;
 }
 
 .green {
-	border-bottom: 300px solid rgb(0, 255, 64);
+	border-bottom: 300px solid rgb(0, 183, 46);
   transform: rotate(90deg);
   margin: 0 auto;
   margin-left: 0;
 }
 
 .blue {
-	border-bottom: 300px solid rgb(0, 247, 255);
+	border-bottom: 300px solid rgb(0, 171, 177);
   transform: rotate(270deg);
   margin: 0 auto;
   margin-right: 0;
 }
 
 .purple {
-	border-bottom: 300px solid rgb(140, 0, 255);
+	border-bottom: 300px solid rgb(94, 0, 171);
   transform: rotate(180deg); 
   margin: 0 auto;
   margin-left: 0;
