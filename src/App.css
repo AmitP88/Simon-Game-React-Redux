@@ -240,9 +240,8 @@ input:checked + .slider:before {
   height: 150px;
   width: 150px;
   background-color: antiquewhite;
-  border-radius: 0 108% 0 0;
+  border-radius: 0 0 108% 0;
   bottom: 100.5%;
   left: 50%;
   border-left: 1px black solid;
-  transform: rotate(90deg);
 }
