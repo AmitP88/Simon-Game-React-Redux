@@ -73,4 +73,5 @@ html {
   position: relative;
   bottom: 450px;
   border-radius: 50%;
+  border: 1px #607D8B solid;
 }
