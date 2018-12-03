@@ -1,4 +1,4 @@
-html {
+html,body {
   height: 100%;
   background-color: #163345;  
 }
@@ -22,8 +22,27 @@ html {
 } */
 
 /* Gamepad */
+.gamepad {
+  position: relative;
+}
+
 .LightsSquare-container {
   margin-top: 10%;
+  top: 0;
+  left: 0;
+}
+
+/* Control Box*/
+.Controls {
+  position: absolute;
+  top: 25%;
+  margin: 0 auto;
+  display: inline-grid;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px #607D8B solid;
 }
 
 .topHalf, .bottomHalf {
@@ -62,18 +81,6 @@ html {
   transform: rotate(180deg); 
   margin: 0 auto;
   margin-left: 0;
-}
-
-/* Control Box*/
-.Controls {
-  width: 300px;
-  height: 300px;
-  background-color: white;
-  margin: 0 auto;
-  position: relative;
-  bottom: 450px;
-  border-radius: 50%;
-  border: 1px #607D8B solid;
 }
 
 /* ========== [OnOffSwitch] ====================== */

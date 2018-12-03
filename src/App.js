@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './media_queries.css';
 
 import LightsSquare from './components/LightsSquare';
 import Controls from './components/Controls';
