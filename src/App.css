@@ -205,3 +205,15 @@ input:checked + .slider:before {
   background-size: 100%;
   transition: background 0s;
 }
+
+/* ========== [Level Counter] ====================== */
+.LevelCounter-container {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background-color: antiquewhite;
+  border-radius: 0 108% 0 0;
+  border-left: 1px black solid;
+  bottom: 50.5%;
+  transform: rotate(180deg);
+}
