@@ -16,17 +16,32 @@
   }
 } */
 
+.topHalf, .bottomHalf {
+  display: flex;
+}
 
-.LightsSquare-container {
-  width: 400px;
-  height: 400px;
-  background-color: gray;
-  margin: 0 auto;
-  margin-top: 20%;
-  
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.Square {
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
+}
+
+.red {
+	border-bottom: 300px solid #f09;
+}
+
+.green {
+	border-bottom: 300px solid rgb(0, 255, 64);
+  transform: rotate(90deg);
+}
+
+.blue {
+	border-bottom: 300px solid rgb(0, 247, 255);
+  transform: rotate(270deg);
+}
+
+.purple {
+	border-bottom: 300px solid rgb(140, 0, 255);
+  transform: rotate(180deg); 
 }
