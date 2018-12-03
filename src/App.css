@@ -81,6 +81,8 @@ html {
   display: inline-block;
   width: 60px;
   height: 34px;
+  top: 60%;
+  left: 8%;
 }
 
 .switch input {
@@ -138,13 +140,16 @@ input:checked + .slider:before {
 
 .OnOffSwitch-container {
   display: flex;
-  float: left;
   position: relative;
-  top: 25%;
-  left: 5%;
+  height: 150px;
+  width: 150px;
+  background-color: antiquewhite;
 }
 
 .Off-label, .On-label {
   padding: 5px;
   font-weight: bold;
+  position: relative;
+  top: 60%;
+  left: 8%;
 }
