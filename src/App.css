@@ -217,3 +217,15 @@ input:checked + .slider:before {
   bottom: 50.5%;
   transform: rotate(180deg);
 }
+
+/* ========== [Hard Mode] ====================== */
+.HardMode-container {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background-color: antiquewhite;
+  border-radius: 0 108% 0 0;
+  bottom: 100.5%;
+  left: 50%;
+  transform: rotate(90deg);
+}
