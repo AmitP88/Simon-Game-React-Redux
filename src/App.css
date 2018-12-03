@@ -144,6 +144,7 @@ input:checked + .slider:before {
   height: 150px;
   width: 150px;
   background-color: antiquewhite;
+  border-radius: 108% 0 0 0;
 }
 
 .Off-label, .On-label {
