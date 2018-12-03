@@ -4,7 +4,7 @@ class StartButton extends Component {
     render() {
         return (
             <div className="StartButton-container">
-                <button className="StartButton">Start</button>
+                <button className="StartButton ripple">Start</button>
             </div>
         );
     }
