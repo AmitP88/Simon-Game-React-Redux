@@ -186,8 +186,8 @@ input:checked + .slider:before {
 .StartButton {
   background-color: #ccc;
   position: relative;
-  top: 70px;
-  right: 15px;
+  top: 55px;
+  right: 10px;
   border: none;
   padding: 15px;
   border-radius: 50%;
