@@ -12,7 +12,7 @@ class App extends Component {
       <div className="App">
         <div className="gamepad">
           <LightsSquare />
-          <Controls />        
+          <Controls />
         </div>
       </div>
     );

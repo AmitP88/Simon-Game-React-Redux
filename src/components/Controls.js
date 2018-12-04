@@ -3,11 +3,13 @@ import OnOffSwitch from './OnOffSwitch';
 import StartButton from './StartButton';
 import LevelCounter from './LevelCounter';
 import HardMode from './HardMode';
+import Simon from './Simon';
 
 class Controls extends Component {
     render() {
         return (
             <div className="Controls">
+                <Simon />
                 <OnOffSwitch />
                 <StartButton />
                 <LevelCounter />

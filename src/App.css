@@ -32,6 +32,15 @@ html,body {
   left: 0;
 }
 
+.Simon {
+  z-index: 1;
+  position: absolute;
+  top: 33%;
+  left: 33%;
+  border: 1px solid black;
+  background-color: white;
+}
+
 /* Control Box*/
 .Controls {
   position: absolute;
@@ -88,8 +97,8 @@ html,body {
   display: inline-block;
   width: 60px;
   height: 34px;
-  top: 60%;
-  left: 8%;
+  top: 45%;
+  left: 12%;
 }
 
 .switch input {
@@ -159,8 +168,8 @@ input:checked + .slider:before {
   padding: 5px;
   font-weight: bold;
   position: relative;
-  top: 60%;
-  left: 8%;
+  top: 45%;
+  left: 12%;
 }
 
 /* ========== [Start Button] ====================== */
