@@ -24,7 +24,8 @@ html,body {
 /* Gamepad */
 .gamepad {
   position: relative;
-  width: 300px;
+  width: 600px;
+  margin: 0 auto;
 }
 
 .LightsSquare-container {
@@ -46,6 +47,7 @@ html,body {
 .Controls {
   position: absolute;
   top: 25%;
+  left: 25%;
   margin: 0 auto;
   display: inline-grid;
   width: 300px;
