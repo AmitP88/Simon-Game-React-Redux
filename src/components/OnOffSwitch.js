@@ -12,14 +12,13 @@ class OnOffSwitch extends Component {
     handleChange() {
         if(this.state.on === false) {
             this.setState({ 
-             on: true 
+                on: true 
             }, () => console.log(this.state.on));
         } else if (this.state.on === true) {
             this.setState({
-             on: false
+                on: false
             }, () => console.log(this.state.on));
         }
-        
     }
 
     render() {
