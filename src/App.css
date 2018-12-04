@@ -60,6 +60,7 @@ html,body {
   display: flex;
 }
 
+/*=======[Dark button colors (default state)]===========================*/
 .dark_red {
   border-bottom: 300px solid rgb(175, 0, 105);
   margin: 0 auto;
@@ -102,6 +103,86 @@ html,body {
   text-indent: -9999px;
 	border-left: 300px solid transparent;  
 }
+
+/*=======[Light button colors (onClick state)]===========================*/
+.light_red {
+  border-bottom: 300px solid rgb(255, 0, 153);
+  margin: 0 auto;
+  margin-right: 0;
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
+}
+
+.light_green {
+	border-bottom: 300px solid rgb(0, 255, 64);
+  transform: rotate(90deg);
+  margin: 0 auto;
+  margin-left: 0;
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
+}
+
+.light_blue {
+	border-bottom: 300px solid rgb(0, 247, 255);
+  transform: rotate(270deg);
+  margin: 0 auto;
+  margin-right: 0;
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
+}
+
+.light_purple {
+	border-bottom: 300px solid rgb(140, 0, 255);
+  transform: rotate(180deg); 
+  margin: 0 auto;
+  margin-left: 0;
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========== [OnOffSwitch] ====================== */
 .switch {
