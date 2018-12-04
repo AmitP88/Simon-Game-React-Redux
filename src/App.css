@@ -233,7 +233,7 @@ input:checked + .slider:before {
 
 .LevelCounter {
   position: relative;
-  top: 20px;
+  top: 35px;
   left: 65px;
   width: 50px;
   height: 50px;
@@ -243,7 +243,7 @@ input:checked + .slider:before {
 
 .LevelCounter-label {
   position: relative;
-  top: 40px;
+  top: 50px;
   left: 15px;
   font-weight: bold;
 }
