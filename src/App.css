@@ -263,7 +263,7 @@ input:checked + .slider:before {
 .hardmode {
   transform: rotate(-90deg);
   position: relative;
-  top: 45px;
+  top: 55px;
   left: -10px;
 }
 
@@ -271,12 +271,12 @@ input:checked + .slider:before {
   position: relative;
   left: 37px;
   font-weight: bold;
-  bottom: -93px;
+  bottom: -100px;
 }
 
 .hard {
   position: relative;
   right: 57px;
-  top: 8px;
+  top: 20px;
   font-weight: bold;
 }
