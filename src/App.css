@@ -152,6 +152,7 @@ input:checked + .slider:before {
   width: 150px;
   background-color: antiquewhite;
   border-radius: 108% 0 0 0;
+  border-right: 1px solid black;
 }
 
 .Off-label, .On-label {
@@ -217,6 +218,8 @@ input:checked + .slider:before {
   background-color: antiquewhite;
   border-radius: 0 0 0 108%;
   bottom: 50.5%;
+  border-top: 1px black solid;
+  border-right: 1px black solid;
 }
 
 .LevelCounter {
@@ -243,7 +246,8 @@ input:checked + .slider:before {
   width: 150px;
   background-color: antiquewhite;
   border-radius: 0 0 108% 0;
-  bottom: 100.5%;
+  border-top: 1px black solid;
+  bottom: 101%;
   left: 50%;
 }
 
