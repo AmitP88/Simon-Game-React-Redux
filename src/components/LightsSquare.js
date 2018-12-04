@@ -19,41 +19,41 @@ class LightsSquare extends Component {
             case 'red':
                 this.setState({
                     red: 'light_red'
-                }, () => console.log(this.state.red));
+                });
                 setTimeout(() => {
                     this.setState({
                         red: 'dark_red'
-                    }, () => console.log(this.state.red));
+                    });
                 }, 300);
                 break;
             case 'green':
                 this.setState({
                     green: 'light_green'
-                }, () => console.log(this.state.green));
+                });
                 setTimeout(() => {
                     this.setState({
                         green: 'dark_green'
-                    }, () => console.log(this.state.green));
+                    });
                 }, 300);
                 break;
             case 'blue':
                 this.setState({
                     blue: 'light_blue'
-                }, () => console.log(this.state.blue));
+                });
                 setTimeout(() => {
                     this.setState({
                         blue: 'dark_blue'
-                    }, () => console.log(this.state.blue));
+                    });
                 }, 300);
                 break;
             case 'purple':
                 this.setState({
                     purple: 'light_purple'
-                }, () => console.log(this.state.purple));
+                });
                 setTimeout(() => {
                     this.setState({
                         purple: 'dark_purple'
-                    }, () => console.log(this.state.purple));
+                    });
                 }, 300);
                 break;
             default:
