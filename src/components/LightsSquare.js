@@ -5,12 +5,12 @@ class LightsSquare extends Component {
         return (
             <div className="LightsSquare-container">
                 <div className="topHalf">
-                    <div className="Square red"></div>
-                    <div className="Square green"></div>                
+                    <div className="dark_red"></div>
+                    <div className="dark_green"></div>                
                 </div>
                 <div className="bottomHalf">
-                    <div className="Square blue"></div>
-                    <div className="Square purple"></div>
+                    <div className="dark_blue"></div>
+                    <div className="dark_purple"></div>
                 </div>
             </div>
         );

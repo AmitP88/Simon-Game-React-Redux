@@ -60,38 +60,47 @@ html,body {
   display: flex;
 }
 
-.Square {
+.dark_red {
+  border-bottom: 300px solid rgb(175, 0, 105);
+  margin: 0 auto;
+  margin-right: 0;
   width: 0;
 	height: 0;
   text-indent: -9999px;
 	border-left: 300px solid transparent;  
 }
 
-.red {
-  border-bottom: 300px solid rgb(175, 0, 105);
-  margin: 0 auto;
-  margin-right: 0;
-}
-
-.green {
+.dark_green {
 	border-bottom: 300px solid rgb(0, 183, 46);
   transform: rotate(90deg);
   margin: 0 auto;
   margin-left: 0;
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
 }
 
-.blue {
+.dark_blue {
 	border-bottom: 300px solid rgb(0, 171, 177);
   transform: rotate(270deg);
   margin: 0 auto;
   margin-right: 0;
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
 }
 
-.purple {
+.dark_purple {
 	border-bottom: 300px solid rgb(94, 0, 171);
   transform: rotate(180deg); 
   margin: 0 auto;
   margin-left: 0;
+  width: 0;
+	height: 0;
+  text-indent: -9999px;
+	border-left: 300px solid transparent;  
 }
 
 /* ========== [OnOffSwitch] ====================== */
