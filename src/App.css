@@ -181,6 +181,7 @@ input:checked + .slider:before {
   border-radius: 0 108% 0 0;
   bottom: 50%;
   left: 50%;
+  border-left: 1px solid black;
 }
 
 .StartButton {
@@ -255,7 +256,8 @@ input:checked + .slider:before {
   width: 150px;
   background-color: antiquewhite;
   border-radius: 0 0 108% 0;
-  border-top: 1px black solid;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
   bottom: 101%;
   left: 50%;
 }
