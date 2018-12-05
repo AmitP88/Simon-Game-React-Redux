@@ -7,7 +7,8 @@ const initialState = {
         levelCounter: '',
         hardmode: false
     },
-    level : []
+    levelInput : [],
+    playerInput : []
 };
 
 const store = createStore(/*Insert reducer here */);
