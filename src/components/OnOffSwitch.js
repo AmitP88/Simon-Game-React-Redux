@@ -8,7 +8,7 @@ class OnOffSwitch extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(e) {
+    handleChange() {
         if(store.getState().OnOffSwitchReducer.on === false){
             store.dispatch(turnOn());
             console.log(store.getState().OnOffSwitchReducer.on);           

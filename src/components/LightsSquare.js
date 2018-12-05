@@ -12,6 +12,7 @@ import {
     blueReverted,
     purpleReverted
 } from '../actions/LightSquareActions';
+import { redInput, greenInput, blueInput, purpleInput } from '../actions/playerInputActions';
 import store from '../store/store';
 import { connect } from 'react-redux';
 
@@ -27,24 +28,28 @@ class LightsSquare extends Component {
         switch(e.target.id){
             case 'red':
                 store.dispatch(redClicked());
+                store.dispatch(redInput());
                 setTimeout(() => {
                     store.dispatch(redReverted());
                 }, 300);
                 break;
             case 'green':
                 store.dispatch(greenClicked());
+                store.dispatch(greenInput());
                 setTimeout(() => {
                     store.dispatch(greenReverted());
                 }, 300);
                 break;
             case 'blue':
                 store.dispatch(blueClicked());
+                store.dispatch(blueInput());
                 setTimeout(() => {
                     store.dispatch(blueReverted());
                 }, 300);
                 break;
             case 'purple':
                 store.dispatch(purpleClicked());
+                store.dispatch(purpleInput());
                 setTimeout(() => {
                     store.dispatch(purpleReverted());
                 }, 300);
