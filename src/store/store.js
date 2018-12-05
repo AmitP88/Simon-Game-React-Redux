@@ -1,14 +1,22 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import OnOffSwitchReducer from '../reducers/OnOffSwitchReducer';
+import thunk from 'redux-thunk';
 
-const initialState = {
-    Controls : {
-        on: false,
-        startClicked: false,
-        levelCounter: '',
-        hardmode: false
-    },
+export const initialState = {
+    on: false,
+    startClicked: false,
+    levelCounter: '',
+    hardmode: false,
     levelInput : [],
     playerInput : []
 };
 
-const store = createStore(/*Insert reducer here */);
+export const store = createStore(
+    OnOffSwitchReducer,
+    initialState,
+    applyMiddleware(thunk)
+);
+
+store.subscribe(() => store.getState());
+
+export default store;

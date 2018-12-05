@@ -1,5 +1,5 @@
 import { ON, OFF } from '../actions/OnOffSwitchActions';
-import { initialState } from '../store/store';
+import initialState from '../store/store';
 
 const OnOffSwitchReducer = (state = initialState, action) => {
     if(action.type === ON){
@@ -10,6 +10,8 @@ const OnOffSwitchReducer = (state = initialState, action) => {
         return {
             on: false
         }
+    } else {
+        return state;
     }
 }
 

@@ -4,15 +4,20 @@ import './App.css';
 import LightsSquare from './components/LightsSquare';
 import Controls from './components/Controls';
 
+import { Provider } from 'react-redux';
+import store from './store/store';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="gamepad">
-          <LightsSquare />
-          <Controls />
-        </div>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <div className="gamepad">
+            <LightsSquare />
+            <Controls />
+          </div>
+        </div>      
+      </Provider>
     );
   }
 }

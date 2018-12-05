@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
+import store from '../store/store';
+import { turnOn, turnOff } from '../actions/OnOffSwitchActions';
 
 class OnOffSwitch extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            on: false
-        };
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange() {
-        if(this.state.on === false) {
-            this.setState({ 
-                on: true 
-            }, () => console.log(this.state.on));
-        } else if (this.state.on === true) {
-            this.setState({
-                on: false
-            }, () => console.log(this.state.on));
-        }
+    handleChange(e) {
+        if(store.getState().on === false){
+            store.dispatch(turnOn());
+            console.log(store.getState().on);           
+        } else {
+            store.dispatch(turnOff());
+            console.log(store.getState().on);
+        }        
     }
 
     render() {
