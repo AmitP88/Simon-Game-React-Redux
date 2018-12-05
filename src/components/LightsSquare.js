@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
+import {
+    // when light square is clicked
+    redClicked,
+    greenClicked, 
+    blueClicked, 
+    purpleClicked,
+
+    // revert square back to dark color after click
+    redReverted,
+    greenReverted,
+    blueReverted,
+    purpleReverted
+} from '../actions/LightSquareActions';
+import store from '../store/store';
+import { connect } from 'react-redux';
 
 class LightsSquare extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            red: 'dark_red',
-            green: 'dark_green',
-            blue: 'dark_blue',
-            purple: 'dark_purple'
-        }
         this.handleOnClick = this.handleOnClick.bind(this);
     }
 
@@ -17,43 +26,27 @@ class LightsSquare extends Component {
         
         switch(e.target.id){
             case 'red':
-                this.setState({
-                    red: 'light_red'
-                });
+                store.dispatch(redClicked());
                 setTimeout(() => {
-                    this.setState({
-                        red: 'dark_red'
-                    });
+                    store.dispatch(redReverted());
                 }, 300);
                 break;
             case 'green':
-                this.setState({
-                    green: 'light_green'
-                });
+                store.dispatch(greenClicked());
                 setTimeout(() => {
-                    this.setState({
-                        green: 'dark_green'
-                    });
+                    store.dispatch(greenReverted());
                 }, 300);
                 break;
             case 'blue':
-                this.setState({
-                    blue: 'light_blue'
-                });
+                store.dispatch(blueClicked());
                 setTimeout(() => {
-                    this.setState({
-                        blue: 'dark_blue'
-                    });
+                    store.dispatch(blueReverted());
                 }, 300);
                 break;
             case 'purple':
-                this.setState({
-                    purple: 'light_purple'
-                });
+                store.dispatch(purpleClicked());
                 setTimeout(() => {
-                    this.setState({
-                        purple: 'dark_purple'
-                    });
+                    store.dispatch(purpleReverted());
                 }, 300);
                 break;
             default:
@@ -63,19 +56,28 @@ class LightsSquare extends Component {
     }
 
     render() {
+        // console.log(store.getState());
         return (
             <div className="LightsSquare-container">
                 <div className="topHalf">
-                    <div id="red" className={this.state.red} onClick={this.handleOnClick}></div>
-                    <div id="green" className={this.state.green} onClick={this.handleOnClick}></div>                
+                    <div id="red" className={this.props.LightSquares.red} onClick={this.handleOnClick}></div>
+                    <div id="green" className={this.props.LightSquares.green} onClick={this.handleOnClick}></div>                
                 </div>
                 <div className="bottomHalf">
-                    <div id="blue" className={this.state.blue} onClick={this.handleOnClick}></div>
-                    <div id="purple" className={this.state.purple} onClick={this.handleOnClick}></div>
+                    <div id="blue" className={this.props.LightSquares.blue} onClick={this.handleOnClick}></div>
+                    <div id="purple" className={this.props.LightSquares.purple} onClick={this.handleOnClick}></div>
                 </div>
             </div>
         );
     }
 }
 
-export default LightsSquare;
+export const mapStateToProps = (state) => {
+    console.log(state);
+
+    return {
+        LightSquares: state.LightsSquareReducer.lightSquares
+    }
+}
+
+export default connect(mapStateToProps)(LightsSquare);
