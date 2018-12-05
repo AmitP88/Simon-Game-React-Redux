@@ -19,12 +19,10 @@ import { connect } from 'react-redux';
 class LightsSquare extends Component {
     constructor(props) {
         super(props);
-        this.handleOnClick = this.handleOnClick.bind(this);
+        this.playersTurn = this.playersTurn.bind(this);
     }
 
-    handleOnClick(e) {
-        e.preventDefault();
-        
+    playersTurn(e){
         switch(e.target.id){
             case 'red':
                 store.dispatch(redClicked());
@@ -61,16 +59,15 @@ class LightsSquare extends Component {
     }
 
     render() {
-        // console.log(store.getState());
         return (
             <div className="LightsSquare-container">
                 <div className="topHalf">
-                    <div id="red" className={this.props.LightSquares.red} onClick={this.props.OnOffSwitch && this.props.StartButton ? this.handleOnClick : this.props.disabled}></div>
-                    <div id="green" className={this.props.LightSquares.green} onClick={this.props.OnOffSwitch && this.props.StartButton ? this.handleOnClick : this.props.disabled}></div>                
+                    <div id="red" className={this.props.LightSquares.red} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>
+                    <div id="green" className={this.props.LightSquares.green} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>                
                 </div>
                 <div className="bottomHalf">
-                    <div id="blue" className={this.props.LightSquares.blue} onClick={this.props.OnOffSwitch && this.props.StartButton ? this.handleOnClick : this.props.disabled}></div>
-                    <div id="purple" className={this.props.LightSquares.purple} onClick={this.props.OnOffSwitch && this.props.StartButton ? this.handleOnClick : this.props.disabled}></div>
+                    <div id="blue" className={this.props.LightSquares.blue} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>
+                    <div id="purple" className={this.props.LightSquares.purple} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>
                 </div>
             </div>
         );
@@ -83,7 +80,8 @@ export const mapStateToProps = (state) => {
     return {
         LightSquares: state.LightsSquareReducer.lightSquares,
         OnOffSwitch: state.OnOffSwitchReducer.on,
-        StartButton: state.StartButtonReducer.startClicked
+        StartButton: state.StartButtonReducer.startClicked,
+        turn: state.turnReducer.turn
     }
 }
 
