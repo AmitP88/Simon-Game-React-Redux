@@ -5,7 +5,9 @@ class LevelCounter extends Component {
     render() {
         return (
             <div className="LevelCounter-container">
-                <div className="LevelCounter">{this.props.levelCounter}</div>
+                <div className="LevelCounter">
+                    <div className="counter">{this.props.levelCounter}</div>
+                </div>
                 <div className="LevelCounter-label">Level</div>
             </div>
         );
