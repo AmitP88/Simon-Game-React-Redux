@@ -60,12 +60,12 @@ class LightsSquare extends Component {
         return (
             <div className="LightsSquare-container">
                 <div className="topHalf">
-                    <div id="red" className={this.props.LightSquares.red} onClick={this.handleOnClick}></div>
-                    <div id="green" className={this.props.LightSquares.green} onClick={this.handleOnClick}></div>                
+                    <div id="red" className={this.props.LightSquares.red} onClick={this.props.OnOffSwitch ? this.handleOnClick : this.props.disabled}></div>
+                    <div id="green" className={this.props.LightSquares.green} onClick={this.props.OnOffSwitch ? this.handleOnClick : this.props.disabled}></div>                
                 </div>
                 <div className="bottomHalf">
-                    <div id="blue" className={this.props.LightSquares.blue} onClick={this.handleOnClick}></div>
-                    <div id="purple" className={this.props.LightSquares.purple} onClick={this.handleOnClick}></div>
+                    <div id="blue" className={this.props.LightSquares.blue} onClick={this.props.OnOffSwitch ? this.handleOnClick : this.props.disabled}></div>
+                    <div id="purple" className={this.props.LightSquares.purple} onClick={this.props.OnOffSwitch ? this.handleOnClick : this.props.disabled}></div>
                 </div>
             </div>
         );
@@ -76,7 +76,8 @@ export const mapStateToProps = (state) => {
     console.log(state);
 
     return {
-        LightSquares: state.LightsSquareReducer.lightSquares
+        LightSquares: state.LightsSquareReducer.lightSquares,
+        OnOffSwitch: state.OnOffSwitchReducer.on
     }
 }
 
