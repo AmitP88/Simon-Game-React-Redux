@@ -4,6 +4,7 @@ import LightsSquareReducer from '../reducers/LightSquareReducer';
 import playerInputReducer from '../reducers/playerInputReducer';
 import StartButtonReducer from '../reducers/StartButtonReducer';
 import turnReducer from '../reducers/turnReducer';
+import LevelCounterReducer from '../reducers/LevelCounterReducer';
 import thunk from 'redux-thunk';
 
 export const initialState = {
@@ -28,7 +29,8 @@ export const store = createStore(
         LightsSquareReducer,
         playerInputReducer,
         StartButtonReducer,
-        turnReducer
+        turnReducer,
+        LevelCounterReducer
     }),
     applyMiddleware(thunk)
 );

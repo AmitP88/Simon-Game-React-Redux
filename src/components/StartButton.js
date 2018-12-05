@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import store from '../store/store';
 import { connect } from 'react-redux';
 import { startClicked } from '../actions/StartButtonActions';
+import { incrementLevelCounter } from '../actions/LevelCounterActions';
 
 class StartButton extends Component {
     constructor(props){
@@ -13,6 +14,7 @@ class StartButton extends Component {
     computersTurn(){
         /* increment levelCounter & change levelCounter background color */
         console.log('computers turn');
+        store.dispatch(incrementLevelCounter());
 
         /* dispatch a random colorInput a number of times depending on the value of levelCounter */
 
