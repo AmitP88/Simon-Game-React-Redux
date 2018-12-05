@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import OnOffSwitchReducer from '../reducers/OnOffSwitchReducer';
 import LightsSquareReducer from '../reducers/LightSquareReducer';
 import playerInputReducer from '../reducers/playerInputReducer';
+import StartButtonReducer from '../reducers/StartButtonReducer';
 import thunk from 'redux-thunk';
 
 export const initialState = {
@@ -16,14 +17,17 @@ export const initialState = {
         green: 'dark_green',
         blue: 'dark_blue',
         purple: 'dark_purple'        
-    }
+    },
+    computersTurn: true,
+    playersTurn: false
 };
 
 export const store = createStore(
     combineReducers({
         OnOffSwitchReducer,
         LightsSquareReducer,
-        playerInputReducer
+        playerInputReducer,
+        StartButtonReducer
     }),
     applyMiddleware(thunk)
 );
