@@ -24,11 +24,11 @@ class StartButton extends Component {
     constructor(props){
         super(props);
         this.handleStartClick = this.handleStartClick.bind(this);
-        this.initialComputersTurn = this.initialComputersTurn.bind(this);
+        this.ComputersTurn = this.ComputersTurn.bind(this);
     }
 
     // When the user clicks Start, starts the game off with the computer starting at level 1
-    initialComputersTurn(){
+    ComputersTurn(){
         let availableComputerInputs = [
             computerRedInput(),
             computerGreenInput(), 
@@ -44,46 +44,48 @@ class StartButton extends Component {
         /* dispatch a random colorInput only once, since this is the 1st level (subsequent levels will be generated in LightSquare component) */
         store.dispatch(randomComputerInput());
 
+        let computers1stMove = store.getState().ComputerInputReducer.computerInput[0];
+
         /* based on what input is in computerInput state, dispatch action that lights up corresponding colored square */
-        switch(this.props.computerInput){
-            case "red":
+         switch(computers1stMove){
+            case 'red':
                 store.dispatch(redClicked());
                 setTimeout(() => {
                     store.dispatch(redReverted());
                 }, 300);
                 break;
-            case "green":
+            case 'green':
                 store.dispatch(greenClicked());
                 setTimeout(() => {
                     store.dispatch(greenReverted());
                 }, 300);
                 break;
-            case "blue":
+            case 'blue':
                 store.dispatch(blueClicked());
                 setTimeout(() => {
                     store.dispatch(blueReverted());
                 }, 300);
                 break;
-            case "purple":
+            case 'purple':
                 store.dispatch(purpleClicked());
                 setTimeout(() => {
                     store.dispatch(purpleReverted());
                 }, 300);
                 break;
             default:
-                console.log(this.props.computerInput);
-                break;
-        }
+                console.log(computers1stMove);
+         }
+
         /* change turn state to 'player', ending computers turn */
         store.dispatch(playersTurn());
-        
-        console.log(store.getState());
+
+        console.log(store.getState());  
     }
 
     handleStartClick() {
-        if(this.props.OnOffSwitch){
+        if(this.props.OnOffSwitch && this.props.turn === 'computer'){
             store.dispatch(startClicked());
-            this.initialComputersTurn();
+            this.ComputersTurn();
         }
     }
 
@@ -99,7 +101,7 @@ class StartButton extends Component {
 export const mapStateToProps = (state) => {
     return {
         OnOffSwitch: state.OnOffSwitchReducer.on,
-        computerInput: state.ComputerInputReducer.computerInput
+        turn: state.TurnReducer.turn
     }
 }
 
