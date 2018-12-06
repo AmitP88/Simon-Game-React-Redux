@@ -12,7 +12,10 @@ import {
     blueReverted,
     purpleReverted
 } from '../actions/LightSquareActions';
+import { incrementLevelCounter } from '../actions/LevelCounterActions';
 import { playerRedInput, playerGreenInput, playerBlueInput, playerPurpleInput } from '../actions/PlayerInputActions';
+import { computerRedInput, computerGreenInput, computerBlueInput, computerPurpleInput } from '../actions/ComputerInputActions';
+import { playersTurn } from '../actions/TurnActions';
 import store from '../store/store';
 import { connect } from 'react-redux';
 
@@ -20,6 +23,31 @@ class LightsSquare extends Component {
     constructor(props) {
         super(props);
         this.playersTurn = this.playersTurn.bind(this);
+        this.computersTurn = this.computersTurn.bind(this);
+    }
+
+    computersTurn(){
+        let availableComputerInputs = [
+            computerRedInput(),
+            computerGreenInput(), 
+            computerBlueInput(), 
+            computerPurpleInput()
+        ];
+
+        let randomComputerInput = () => availableComputerInputs[Math.floor(Math.random()*availableComputerInputs.length)];  
+
+        /* increment levelCounter & change levelCounter background color */
+        store.dispatch(incrementLevelCounter());
+
+        /* dispatch a random colorInput only once, since this is the 1st level (subsequent levels will be generated in LightSquare component) */
+        store.dispatch(randomComputerInput());
+
+        /* based on what input is in computerInput state, dispatch action that lights up corresponding colored square */
+
+        /* change turn state to 'player', ending computers turn */
+        store.dispatch(playersTurn());
+        
+        console.log(store.getState());
     }
 
     playersTurn(e){
@@ -62,12 +90,20 @@ class LightsSquare extends Component {
         return (
             <div className="LightsSquare-container">
                 <div className="topHalf">
-                    <div id="red" className={this.props.LightSquares.red} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>
-                    <div id="green" className={this.props.LightSquares.green} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>                
+                    <div id="red" className={this.props.LightSquares.red} onClick={
+                        this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'computer' ? this.computersTurn : this.playersTurn
+                    }></div>
+                    <div id="green" className={this.props.LightSquares.green} onClick={
+                        this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'computer' ? this.computersTurn : this.playersTurn
+                    }></div>                
                 </div>
                 <div className="bottomHalf">
-                    <div id="blue" className={this.props.LightSquares.blue} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>
-                    <div id="purple" className={this.props.LightSquares.purple} onClick={this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'player' ? this.playersTurn : this.props.disabled}></div>
+                    <div id="blue" className={this.props.LightSquares.blue} onClick={
+                        this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'computer' ? this.computersTurn : this.playersTurn
+                    }></div>
+                    <div id="purple" className={this.props.LightSquares.purple} onClick={
+                        this.props.OnOffSwitch && this.props.StartButton && this.props.turn === 'computer' ? this.computersTurn : this.playersTurn
+                    }></div>
                 </div>
             </div>
         );
@@ -75,8 +111,6 @@ class LightsSquare extends Component {
 }
 
 export const mapStateToProps = (state) => {
-    console.log(state);
-
     return {
         LightSquares: state.LightsSquareReducer.lightSquares,
         OnOffSwitch: state.OnOffSwitchReducer.on,
