@@ -12,7 +12,7 @@ import {
     blueReverted,
     purpleReverted
 } from '../actions/LightSquareActions';
-import { redInput, greenInput, blueInput, purpleInput } from '../actions/playerInputActions';
+import { redInput, greenInput, blueInput, purpleInput } from '../actions/InputActions';
 import store from '../store/store';
 import { connect } from 'react-redux';
 

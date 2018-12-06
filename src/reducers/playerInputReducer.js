@@ -1,4 +1,4 @@
-import { RED_INPUT, GREEN_INPUT, BLUE_INPUT, PURPLE_INPUT } from '../actions/playerInputActions';
+import { RED_INPUT, GREEN_INPUT, BLUE_INPUT, PURPLE_INPUT } from '../actions/InputActions';
 import { initialState } from '../store/store';
 
 const playerInputReducer = (state = initialState, action) => {
