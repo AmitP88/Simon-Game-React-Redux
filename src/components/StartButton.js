@@ -40,7 +40,7 @@ class StartButton extends Component {
 export const mapStateToProps = (state) => {
     return {
         OnOffSwitch: state.OnOffSwitchReducer.on,
-        turn: state.turnReducer.turn
+        turn: state.TurnReducer.turn
     }
 }
 

@@ -12,7 +12,7 @@ import {
     blueReverted,
     purpleReverted
 } from '../actions/LightSquareActions';
-import { redInput, greenInput, blueInput, purpleInput } from '../actions/InputActions';
+import { redInput, greenInput, blueInput, purpleInput } from '../actions/PlayerInputActions';
 import store from '../store/store';
 import { connect } from 'react-redux';
 
@@ -81,7 +81,7 @@ export const mapStateToProps = (state) => {
         LightSquares: state.LightsSquareReducer.lightSquares,
         OnOffSwitch: state.OnOffSwitchReducer.on,
         StartButton: state.StartButtonReducer.startClicked,
-        turn: state.turnReducer.turn
+        turn: state.TurnReducer.turn
     }
 }
 
