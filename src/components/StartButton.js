@@ -38,48 +38,50 @@ class StartButton extends Component {
 
     // When the user clicks Start, starts the game off with the computer starting at level 1
     initialComputersTurn(){
-        /* increment levelCounter & change levelCounter background color */
-        store.dispatch(incrementLevelCounter());
+        setTimeout(() => {
+            /* increment levelCounter & change levelCounter background color */
+            store.dispatch(incrementLevelCounter());
 
-        /* dispatch a random colorInput only once, since this is the 1st level (subsequent levels will be generated in LightSquare component) */
-        store.dispatch(randomComputerInput());
+            /* dispatch a random colorInput only once, since this is the 1st level (subsequent levels will be generated in LightSquare component) */
+            store.dispatch(randomComputerInput());
 
-        let computers1stMove = store.getState().ComputerInputReducer.computerInput[0];
+            let computers1stMove = store.getState().ComputerInputReducer.computerInput[0];
 
-        /* based on what input is in computerInput state, dispatch action that lights up corresponding colored square */
-         switch(computers1stMove){
-            case 'red':
-                store.dispatch(redClicked());
-                setTimeout(() => {
-                    store.dispatch(redReverted());
-                }, 300);
-                break;
-            case 'green':
-                store.dispatch(greenClicked());
-                setTimeout(() => {
-                    store.dispatch(greenReverted());
-                }, 300);
-                break;
-            case 'blue':
-                store.dispatch(blueClicked());
-                setTimeout(() => {
-                    store.dispatch(blueReverted());
-                }, 300);
-                break;
-            case 'purple':
-                store.dispatch(purpleClicked());
-                setTimeout(() => {
-                    store.dispatch(purpleReverted());
-                }, 300);
-                break;
-            default:
-                console.log(computers1stMove);
-         }
+            /* based on what input is in computerInput state, dispatch action that lights up corresponding colored square */
+            switch(computers1stMove){
+                case 'red':
+                    store.dispatch(redClicked());
+                    setTimeout(() => {
+                        store.dispatch(redReverted());
+                    }, 300);
+                    break;
+                case 'green':
+                    store.dispatch(greenClicked());
+                    setTimeout(() => {
+                        store.dispatch(greenReverted());
+                    }, 300);
+                    break;
+                case 'blue':
+                    store.dispatch(blueClicked());
+                    setTimeout(() => {
+                        store.dispatch(blueReverted());
+                    }, 300);
+                    break;
+                case 'purple':
+                    store.dispatch(purpleClicked());
+                    setTimeout(() => {
+                        store.dispatch(purpleReverted());
+                    }, 300);
+                    break;
+                default:
+                    console.log(computers1stMove);
+            }
 
-        /* change turn state to 'player', ending computers turn */
-        store.dispatch(playersTurn());
+            /* change turn state to 'player', ending computers turn */
+            store.dispatch(playersTurn());
 
-        console.log(store.getState());  
+            console.log(store.getState());  
+        }, 1000);
     }
 
     handleStartClick() {
