@@ -1,21 +1,21 @@
-import { RED_INPUT, GREEN_INPUT, BLUE_INPUT, PURPLE_INPUT } from '../actions/PlayerInputActions';
+import { PLAYER_RED_INPUT, PLAYER_GREEN_INPUT, PLAYER_BLUE_INPUT, PLAYER_PURPLE_INPUT } from '../actions/PlayerInputActions';
 import { initialState } from '../store/store';
 
-const playerInputReducer = (state = initialState, action) => {
+const PlayerInputReducer = (state = initialState, action) => {
     switch(action.type){
-        case RED_INPUT:
+        case PLAYER_RED_INPUT:
             return {
                 playerInput: [...state.playerInput, action.payload]
             }
-        case GREEN_INPUT:
+        case PLAYER_GREEN_INPUT:
             return {
                 playerInput: [...state.playerInput, action.payload]
             }
-        case BLUE_INPUT:
+        case PLAYER_BLUE_INPUT:
             return {
                 playerInput: [...state.playerInput, action.payload]
             }
-        case PURPLE_INPUT:
+        case PLAYER_PURPLE_INPUT:
             return {
                 playerInput: [...state.playerInput, action.payload]
             }
@@ -24,4 +24,4 @@ const playerInputReducer = (state = initialState, action) => {
     }
 }
 
-export default playerInputReducer;
+export default PlayerInputReducer;

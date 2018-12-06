@@ -1,33 +1,33 @@
-export const RED_INPUT = 'RED_INPUT';
-export const GREEN_INPUT = 'GREEN_INPUT';
-export const BLUE_INPUT = 'BLUE_INPUT';
-export const PURPLE_INPUT = 'PURPLE_INPUT';
+export const PLAYER_RED_INPUT = 'PLAYER_RED_INPUT';
+export const PLAYER_GREEN_INPUT = 'PLAYER_GREEN_INPUT';
+export const PLAYER_BLUE_INPUT = 'PLAYER_BLUE_INPUT';
+export const PLAYER_PURPLE_INPUT = 'PLAYER_PURPLE_INPUT';
 
 // pushes chosen input into playerInput array in state
-export const redInput = () => {
+export const playerRedInput = () => {
     return {
-        type: RED_INPUT,
+        type: PLAYER_RED_INPUT,
         payload: 'red'
     }
 }
 
-export const greenInput = () => {
+export const playerGreenInput = () => {
     return {
-        type: GREEN_INPUT,
+        type: PLAYER_GREEN_INPUT,
         payload: 'green'
     }
 }
 
-export const blueInput = () => {
+export const playerBlueInput = () => {
     return {
-        type: BLUE_INPUT,
+        type: PLAYER_BLUE_INPUT,
         payload: 'blue'
     }
 }
 
-export const purpleInput = () => {
+export const playerPurpleInput = () => {
     return {
-        type: PURPLE_INPUT,
+        type: PLAYER_PURPLE_INPUT,
         payload: 'purple'
     }
 }
