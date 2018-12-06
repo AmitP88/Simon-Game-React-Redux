@@ -36,14 +36,14 @@ class LightsSquare extends Component {
 
         /* dispatch a random colorInput */
             store.dispatch(randomComputerInput());
-            console.log(store.getState().ComputerInputReducer.computerInput);
+            console.log(this.props.computerInput);
 
 
         /* loop through computerInput and press colored squares based on each index value */
-        for(let i = 0; i < store.getState().ComputerInputReducer.computerInput.length; i++){
+        for(let i = 0; i < this.props.computerInput.length; i++){
             /* based on what input is in computerInput state,
                dispatch action that lights up corresponding colored square */
-            switch(store.getState().ComputerInputReducer.computerInput[i]){
+            switch(this.props.computerInput[i]){
                 case 'red':
                     store.dispatch(redClicked());
                     setTimeout(() => {
@@ -69,7 +69,7 @@ class LightsSquare extends Component {
                     }, 300);
                     break;
                 default:
-                    console.log(store.getState().ComputerInputReducer.computerInput[i]);
+                    console.log(this.props.computerInput[i]);
             }
         }
 
@@ -138,7 +138,8 @@ export const mapStateToProps = (state) => {
         LightSquares: state.LightsSquareReducer.lightSquares,
         OnOffSwitch: state.OnOffSwitchReducer.on,
         StartButton: state.StartButtonReducer.startClicked,
-        turn: state.TurnReducer.turn
+        turn: state.TurnReducer.turn,
+        computerInput: state.ComputerInputReducer.computerInput
     }
 }
 
