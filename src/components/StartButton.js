@@ -24,11 +24,11 @@ class StartButton extends Component {
     constructor(props){
         super(props);
         this.handleStartClick = this.handleStartClick.bind(this);
-        this.ComputersTurn = this.ComputersTurn.bind(this);
+        this.initialComputersTurn = this.initialComputersTurn.bind(this);
     }
 
     // When the user clicks Start, starts the game off with the computer starting at level 1
-    ComputersTurn(){
+    initialComputersTurn(){
         let availableComputerInputs = [
             computerRedInput(),
             computerGreenInput(), 
@@ -85,7 +85,7 @@ class StartButton extends Component {
     handleStartClick() {
         if(this.props.OnOffSwitch && this.props.turn === 'computer'){
             store.dispatch(startClicked());
-            this.ComputersTurn();
+            this.initialComputersTurn();
         }
     }
 
