@@ -20,6 +20,15 @@ import {
     purpleReverted
 } from '../actions/LightSquareActions';
 
+export const availableComputerInputs = [
+    computerRedInput(),
+    computerGreenInput(), 
+    computerBlueInput(), 
+    computerPurpleInput()
+];
+
+export const randomComputerInput = () => availableComputerInputs[Math.floor(Math.random()*availableComputerInputs.length)];  
+
 class StartButton extends Component {
     constructor(props){
         super(props);
@@ -29,15 +38,6 @@ class StartButton extends Component {
 
     // When the user clicks Start, starts the game off with the computer starting at level 1
     initialComputersTurn(){
-        let availableComputerInputs = [
-            computerRedInput(),
-            computerGreenInput(), 
-            computerBlueInput(), 
-            computerPurpleInput()
-        ];
-
-        let randomComputerInput = () => availableComputerInputs[Math.floor(Math.random()*availableComputerInputs.length)];  
-
         /* increment levelCounter & change levelCounter background color */
         store.dispatch(incrementLevelCounter());
 

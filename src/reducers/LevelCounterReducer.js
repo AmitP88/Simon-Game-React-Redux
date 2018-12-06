@@ -9,7 +9,7 @@ const LevelCounterReducer = (state = initialState, action) => {
             }            
         } else {
             return {
-                levelCounter: state.levelCounter++
+                levelCounter: state.levelCounter + 1
             }
         }
 

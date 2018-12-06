@@ -16,13 +16,70 @@ import { playerRedInput, playerGreenInput, playerBlueInput, playerPurpleInput } 
 import store from '../store/store';
 import { connect } from 'react-redux';
 
+import { computersTurn ,playersTurn } from '../actions/TurnActions';
+import { incrementLevelCounter } from '../actions/LevelCounterActions';
+import { availableComputerInputs, randomComputerInput } from '../components/StartButton';
+
 class LightsSquare extends Component {
     constructor(props) {
         super(props);
         this.playersTurn = this.playersTurn.bind(this);
+        this.computersTurn = this.computersTurn.bind(this);
+    }
+
+    computersTurn(){
+        setTimeout(() => {
+            console.log('computers turn');
+        /* increment levelCounter & change levelCounter background color */
+            store.dispatch(incrementLevelCounter());
+            console.log(store.getState().LevelCounterReducer.levelCounter);
+
+        /* dispatch a random colorInput */
+            store.dispatch(randomComputerInput());
+            console.log(store.getState().ComputerInputReducer.computerInput);
+
+
+        /* loop through computerInput and press colored squares based on each index value */
+        for(let i = 0; i < store.getState().ComputerInputReducer.computerInput.length; i++){
+            /* based on what input is in computerInput state,
+               dispatch action that lights up corresponding colored square */
+            switch(store.getState().ComputerInputReducer.computerInput[i]){
+                case 'red':
+                    store.dispatch(redClicked());
+                    setTimeout(() => {
+                        store.dispatch(redReverted());
+                    }, 300);
+                    break;
+                case 'green':
+                    store.dispatch(greenClicked());
+                    setTimeout(() => {
+                        store.dispatch(greenReverted());
+                    }, 300);
+                    break;
+                case 'blue':
+                    store.dispatch(blueClicked());
+                    setTimeout(() => {
+                        store.dispatch(blueReverted());
+                    }, 300);
+                    break;
+                case 'purple':
+                    store.dispatch(purpleClicked());
+                    setTimeout(() => {
+                        store.dispatch(purpleReverted());
+                    }, 300);
+                    break;
+                default:
+                    console.log(store.getState().ComputerInputReducer.computerInput[i]);
+            }
+        }
+
+            // Ends computers turn and starts player turn
+            store.dispatch(playersTurn());
+        }, 1000);
     }
 
     playersTurn(e){
+        console.log('players turn');
         switch(e.target.id){
             case 'red':
                 store.dispatch(redClicked());
@@ -56,6 +113,8 @@ class LightsSquare extends Component {
                 console.log(e.target.id);
                 break;
         }
+        store.dispatch(computersTurn());
+        this.computersTurn();
     }
 
     render() {
