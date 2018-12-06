@@ -12,13 +12,13 @@ export const initialState = {
     startClicked: false,
     levelCounter: '',
     hardmode: false,
-    levelInput : [],
+    computerInput : [],
     playerInput : [],
     lightSquares: {
         red: 'dark_red',
         green: 'dark_green',
         blue: 'dark_blue',
-        purple: 'dark_purple'        
+        purple: 'dark_purple'
     },
     turn: 'computer'
 };
