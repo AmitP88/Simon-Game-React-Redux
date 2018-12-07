@@ -17,8 +17,12 @@ import store from '../store/store';
 import { connect } from 'react-redux';
 
 import { computersTurn ,playersTurn } from '../actions/TurnActions';
-import { incrementLevelCounter } from '../actions/LevelCounterActions';
+import { incrementLevelCounter, resetLevelCounter } from '../actions/LevelCounterActions';
 import { randomComputerInput } from '../components/StartButton';
+
+import { clearComputerInput } from '../actions/ComputerInputActions';
+
+
 
 class LightsSquare extends Component {
     constructor(props) {
@@ -134,45 +138,57 @@ class LightsSquare extends Component {
                         console.log('wrong move');
                         store.dispatch(clearPlayerInput());
 
-                        // plays computers move again
-                        setTimeout(() => {
-                            /* loop through computerInput and press colored squares based on each index value */
-                            for(let i = 0; i < this.props.computerInput.length; i++){
-                                /* based on what input is in computerInput state,
-                                dispatch action that lights up corresponding colored square */
+                        // If on EASY mode, computer replays current computerInput array button presses
+                        if(this.props.hardmode === false) {
+                            // plays computers move again
+                            setTimeout(() => {
+                                /* loop through computerInput and press colored squares based on each index value */
+                                for(let i = 0; i < this.props.computerInput.length; i++){
+                                    /* based on what input is in computerInput state,
+                                    dispatch action that lights up corresponding colored square */
 
-                                setTimeout(() => {
-                                    switch(this.props.computerInput[i]){
-                                        case 'red':
-                                            store.dispatch(redClicked());
-                                            setTimeout(() => {
-                                                store.dispatch(redReverted());
-                                            }, 300);
-                                            break;
-                                        case 'green':
-                                            store.dispatch(greenClicked());
-                                            setTimeout(() => {
-                                                store.dispatch(greenReverted());
-                                            }, 300);
-                                            break;
-                                        case 'blue':
-                                            store.dispatch(blueClicked());
-                                            setTimeout(() => {
-                                                store.dispatch(blueReverted());
-                                            }, 300);
-                                            break;
-                                        case 'purple':
-                                            store.dispatch(purpleClicked());
-                                            setTimeout(() => {
-                                                store.dispatch(purpleReverted());
-                                            }, 300);
-                                            break;
-                                        default:
-                                            console.log(this.props.computerInput[i]);
-                                    }                
-                                }, i * 500);
-                            }
-                        }, 1000);
+                                    setTimeout(() => {
+                                        switch(this.props.computerInput[i]){
+                                            case 'red':
+                                                store.dispatch(redClicked());
+                                                setTimeout(() => {
+                                                    store.dispatch(redReverted());
+                                                }, 300);
+                                                break;
+                                            case 'green':
+                                                store.dispatch(greenClicked());
+                                                setTimeout(() => {
+                                                    store.dispatch(greenReverted());
+                                                }, 300);
+                                                break;
+                                            case 'blue':
+                                                store.dispatch(blueClicked());
+                                                setTimeout(() => {
+                                                    store.dispatch(blueReverted());
+                                                }, 300);
+                                                break;
+                                            case 'purple':
+                                                store.dispatch(purpleClicked());
+                                                setTimeout(() => {
+                                                    store.dispatch(purpleReverted());
+                                                }, 300);
+                                                break;
+                                            default:
+                                                console.log(this.props.computerInput[i]);
+                                        }                
+                                    }, i * 500);
+                                }
+                            }, 1000);                            
+                        } else if(this.props.hardmode){
+                            setTimeout(() => {
+                                store.dispatch(clearComputerInput());
+                                store.dispatch(resetLevelCounter());
+                                store.dispatch(computersTurn());
+                            }, 500);
+                            this.computersTurn();
+                        }
+                        
+
 
 
 
@@ -214,7 +230,8 @@ export const mapStateToProps = (state) => {
         StartButton: state.StartButtonReducer.startClicked,
         turn: state.TurnReducer.turn,
         computerInput: state.ComputerInputReducer.computerInput,
-        playerInput: state.PlayerInputReducer.playerInput
+        playerInput: state.PlayerInputReducer.playerInput,
+        hardmode: state.HardModeReducer.hardmode
     }
 }
 
