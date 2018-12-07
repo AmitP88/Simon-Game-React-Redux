@@ -120,20 +120,66 @@ class LightsSquare extends Component {
         setTimeout(() => {
             console.log('playerInput : ', this.props.playerInput);
 
+            // Checks to see if players moves are the same as the computers moves
             const moveMatch = (playerInput, computerInput) => {
                 playerInput = this.props.playerInput;
                 computerInput = this.props.computerInput;
 
                 for(let i = 0; i < playerInput.length; i++){
+                    /** If player makes a wrong move (a move that is different than computers move),
+                        resets playerInput back to an empty array */ 
                     if (playerInput[i] !== computerInput[i]){
                         console.log('wrong move');
                         store.dispatch(clearPlayerInput());
+
+                        // plays computers move again
+                        setTimeout(() => {
+                            /* loop through computerInput and press colored squares based on each index value */
+                            for(let i = 0; i < this.props.computerInput.length; i++){
+                                /* based on what input is in computerInput state,
+                                dispatch action that lights up corresponding colored square */
+
+                                setTimeout(() => {
+                                    switch(this.props.computerInput[i]){
+                                        case 'red':
+                                            store.dispatch(redClicked());
+                                            setTimeout(() => {
+                                                store.dispatch(redReverted());
+                                            }, 300);
+                                            break;
+                                        case 'green':
+                                            store.dispatch(greenClicked());
+                                            setTimeout(() => {
+                                                store.dispatch(greenReverted());
+                                            }, 300);
+                                            break;
+                                        case 'blue':
+                                            store.dispatch(blueClicked());
+                                            setTimeout(() => {
+                                                store.dispatch(blueReverted());
+                                            }, 300);
+                                            break;
+                                        case 'purple':
+                                            store.dispatch(purpleClicked());
+                                            setTimeout(() => {
+                                                store.dispatch(purpleReverted());
+                                            }, 300);
+                                            break;
+                                        default:
+                                            console.log(this.props.computerInput[i]);
+                                    }                
+                                }, i * 500);
+                            }
+                        }, 1000);
+
+
+
                     }
                 }
             };
 
             moveMatch();
-            
+
             if(this.props.playerInput.length === this.props.computerInput.length){
                 store.dispatch(computersTurn());
                 this.computersTurn();            
