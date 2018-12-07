@@ -18,7 +18,7 @@ import { connect } from 'react-redux';
 
 import { computersTurn ,playersTurn } from '../actions/TurnActions';
 import { incrementLevelCounter } from '../actions/LevelCounterActions';
-import { availableComputerInputs, randomComputerInput } from '../components/StartButton';
+import { randomComputerInput } from '../components/StartButton';
 
 class LightsSquare extends Component {
     constructor(props) {
@@ -29,14 +29,12 @@ class LightsSquare extends Component {
 
     computersTurn(){
         setTimeout(() => {
-            console.log('computers turn');
         /* increment levelCounter & change levelCounter background color */
             store.dispatch(incrementLevelCounter());
-            console.log(store.getState().LevelCounterReducer.levelCounter);
 
         /* dispatch a random colorInput */
             store.dispatch(randomComputerInput());
-            console.log(this.props.computerInput);
+            console.log('computerInput : ', this.props.computerInput);
 
 
 
@@ -84,7 +82,6 @@ class LightsSquare extends Component {
     }
 
     playersTurn(e){
-        console.log('players turn');
         switch(e.target.id){
             case 'red':
                 store.dispatch(redClicked());
@@ -118,8 +115,12 @@ class LightsSquare extends Component {
                 console.log(e.target.id);
                 break;
         }
-        store.dispatch(computersTurn());
-        this.computersTurn();
+        setTimeout(() => {
+            console.log('playerInput : ', this.props.playerInput);
+            store.dispatch(computersTurn());
+            this.computersTurn();
+        }, 500);
+
     }
 
     render() {
@@ -144,7 +145,8 @@ export const mapStateToProps = (state) => {
         OnOffSwitch: state.OnOffSwitchReducer.on,
         StartButton: state.StartButtonReducer.startClicked,
         turn: state.TurnReducer.turn,
-        computerInput: state.ComputerInputReducer.computerInput
+        computerInput: state.ComputerInputReducer.computerInput,
+        playerInput: state.PlayerInputReducer.playerInput
     }
 }
 
