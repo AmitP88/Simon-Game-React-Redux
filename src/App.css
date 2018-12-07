@@ -321,6 +321,209 @@ input:checked + .slider:before {
   font-size: 30px;
 }
 
+/*=========================================(Counter background colors for each level)=========================================*/
+.LevelCounter-Yale {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #0E4D92;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Azure {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #0080FF;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Teal {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #008081;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Tiffany {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #81D8D0;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Laguna {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #F8E473;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Banana {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #FCF4A3;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-IndianRed {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #CD5C5C;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Hibiscus {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #B47757;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Desire {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #EA3C53;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Ruby {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #E0115F;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Slateblue {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #007FFF;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-DeepSkyBlue {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #00BFFF;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Wales {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #4AC948;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-GreenLED {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #5DFC0A;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Yellow {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #FFFF00;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Orange {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF8000;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Nectarine {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF3300;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Purple {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #9B30FF;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-SpicyPink {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF1CAE;
+  transform: rotate(45deg);
+}
+
+.LevelCounter-Fuschia {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #FF00FF;
+  transform: rotate(45deg);
+}
+
+/*============================================================================================================================*/
+
 /* ========== [Hard Mode] ====================== */
 .HardMode-container {
   position: relative;
