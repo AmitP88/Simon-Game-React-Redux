@@ -66,7 +66,7 @@ class LightsSquare extends Component {
                         store.dispatch(redClicked());
                         setTimeout(() => {
                             this.soundRed.play();
-                        }, 100);
+                        }, 300);
                         setTimeout(() => {
                             store.dispatch(redReverted());
                         }, 300);
@@ -75,7 +75,7 @@ class LightsSquare extends Component {
                         store.dispatch(greenClicked());
                         setTimeout(() => {
                             this.soundGreen.play();
-                        }, 100);
+                        }, 300);
                         setTimeout(() => {
                             store.dispatch(greenReverted());
                         }, 300);
@@ -84,7 +84,7 @@ class LightsSquare extends Component {
                         store.dispatch(blueClicked());
                         setTimeout(() => {
                             this.soundBlue.play();
-                        }, 100);
+                        }, 300);
                         setTimeout(() => {
                             store.dispatch(blueReverted());
                         }, 300);
@@ -93,7 +93,7 @@ class LightsSquare extends Component {
                         store.dispatch(purpleClicked());
                         setTimeout(() => {
                             this.soundPurple.play();
-                        }, 100);
+                        }, 300);
                         setTimeout(() => {
                             store.dispatch(purpleReverted());
                         }, 300);
@@ -117,7 +117,7 @@ class LightsSquare extends Component {
                 store.dispatch(redClicked());
                 setTimeout(() => {
                     this.soundRed.play();
-                }, 100);
+                }, 300);
                 store.dispatch(playerRedInput());
                 setTimeout(() => {
                     store.dispatch(redReverted());
@@ -127,7 +127,7 @@ class LightsSquare extends Component {
                 store.dispatch(greenClicked());
                 setTimeout(() => {
                     this.soundGreen.play();
-                }, 100);
+                }, 300);
                 store.dispatch(playerGreenInput());
                 setTimeout(() => {
                     store.dispatch(greenReverted());
@@ -137,7 +137,7 @@ class LightsSquare extends Component {
                 store.dispatch(blueClicked());
                 setTimeout(() => {
                     this.soundBlue.play();
-                }, 100);
+                }, 300);
                 store.dispatch(playerBlueInput());
                 setTimeout(() => {
                     store.dispatch(blueReverted());
@@ -147,7 +147,7 @@ class LightsSquare extends Component {
                 store.dispatch(purpleClicked());
                 setTimeout(() => {
                     this.soundPurple.play();
-                }, 100);
+                }, 300);
                 store.dispatch(playerPurpleInput());
                 setTimeout(() => {
                     store.dispatch(purpleReverted());
@@ -188,7 +188,7 @@ class LightsSquare extends Component {
                                                 store.dispatch(redClicked());
                                                 setTimeout(() => {
                                                     this.soundRed.play();
-                                                }, 100);
+                                                }, 300);
                                                 setTimeout(() => {
                                                     store.dispatch(redReverted());
                                                 }, 300);
@@ -197,7 +197,7 @@ class LightsSquare extends Component {
                                                 store.dispatch(greenClicked());
                                                 setTimeout(() => {
                                                     this.soundGreen.play();
-                                                }, 100);
+                                                }, 300);
                                                 setTimeout(() => {
                                                     store.dispatch(greenReverted());
                                                 }, 300);
@@ -206,7 +206,7 @@ class LightsSquare extends Component {
                                                 store.dispatch(blueClicked());
                                                 setTimeout(() => {
                                                     this.soundBlue.play();
-                                                }, 100);
+                                                }, 300);
                                                 setTimeout(() => {
                                                     store.dispatch(blueReverted());
                                                 }, 300);
@@ -215,7 +215,7 @@ class LightsSquare extends Component {
                                                 store.dispatch(purpleClicked());
                                                 setTimeout(() => {
                                                     this.soundPurple.play();
-                                                }, 100);
+                                                }, 300);
                                                 setTimeout(() => {
                                                     store.dispatch(purpleReverted());
                                                 }, 300);
