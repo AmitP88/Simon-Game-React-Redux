@@ -82,7 +82,7 @@ class LightsSquare extends Component {
         }, 1000);
     }
 
-    playersTurn(e){
+    playersTurn(e){        
         switch(e.target.id){
             case 'red':
                 store.dispatch(redClicked());
@@ -116,11 +116,14 @@ class LightsSquare extends Component {
                 console.log(e.target.id);
                 break;
         }
+
         setTimeout(() => {
             console.log('playerInput : ', this.props.playerInput);
-            store.dispatch(computersTurn());
-            this.computersTurn();
-        }, 500);
+            if(this.props.playerInput.length === this.props.computerInput.length){
+                store.dispatch(computersTurn());
+                this.computersTurn();            
+            }  
+        }, 100);
 
     }
 
