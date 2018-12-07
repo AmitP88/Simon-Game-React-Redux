@@ -7,6 +7,11 @@ import { computerRedInput, computerGreenInput, computerBlueInput, computerPurple
 import { computersTurn, playersTurn } from '../actions/TurnActions';
 import { clearPlayerInput } from '../actions/PlayerInputActions';
 
+import simonSound1 from '../sounds/simonSound1.mp3';
+import simonSound2 from '../sounds/simonSound2.mp3';
+import simonSound3 from '../sounds/simonSound3.mp3';
+import simonSound4 from '../sounds/simonSound4.mp3';
+
 import {
     // when light square is clicked
     redClicked,
@@ -35,6 +40,12 @@ class StartButton extends Component {
         super(props);
         this.handleStartClick = this.handleStartClick.bind(this);
         this.initialComputersTurn = this.initialComputersTurn.bind(this);
+
+        // Sounds for square clicks
+        this.soundRed = new Audio(simonSound1);
+        this.soundGreen = new Audio(simonSound2);
+        this.soundBlue = new Audio(simonSound3);
+        this.soundPurple = new Audio(simonSound4);
     }
 
     // When the user clicks Start, starts the game off with the computer starting at level 1
@@ -54,24 +65,28 @@ class StartButton extends Component {
             switch(computers1stMove){
                 case 'red':
                     store.dispatch(redClicked());
+                    this.soundRed.play();
                     setTimeout(() => {
                         store.dispatch(redReverted());
                     }, 300);
                     break;
                 case 'green':
                     store.dispatch(greenClicked());
+                    this.soundGreen.play();
                     setTimeout(() => {
                         store.dispatch(greenReverted());
                     }, 300);
                     break;
                 case 'blue':
                     store.dispatch(blueClicked());
+                    this.soundBlue.play();
                     setTimeout(() => {
                         store.dispatch(blueReverted());
                     }, 300);
                     break;
                 case 'purple':
                     store.dispatch(purpleClicked());
+                    this.soundPurple.play();
                     setTimeout(() => {
                         store.dispatch(purpleReverted());
                     }, 300);
