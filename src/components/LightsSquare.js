@@ -29,9 +29,11 @@ class LightsSquare extends Component {
 
     computersTurn(){
         setTimeout(() => {
-        /* increment levelCounter & change levelCounter background color */
-            store.dispatch(incrementLevelCounter());
+            /* increment levelCounter & change levelCounter background color */
+                store.dispatch(incrementLevelCounter());
+        }, 1000);
 
+        setTimeout(() => {
         /* dispatch a random colorInput */
             store.dispatch(randomComputerInput());
             console.log('computerInput : ', this.props.computerInput);
@@ -79,7 +81,7 @@ class LightsSquare extends Component {
 
             // Ends computers turn and starts player turn
             store.dispatch(playersTurn());
-        }, 1000);
+        }, 1500);
     }
 
     playersTurn(e){        

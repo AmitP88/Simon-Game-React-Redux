@@ -41,8 +41,10 @@ class StartButton extends Component {
     initialComputersTurn(){
         setTimeout(() => {
             /* increment levelCounter & change levelCounter background color */
-            store.dispatch(incrementLevelCounter());
-
+            store.dispatch(incrementLevelCounter());   
+        }, 500);
+     
+        setTimeout(() => {
             /* dispatch a random colorInput only once, since this is the 1st level (subsequent levels will be generated in LightSquare component) */
             store.dispatch(randomComputerInput());
 
@@ -82,7 +84,7 @@ class StartButton extends Component {
             store.dispatch(playersTurn());
 
             console.log(store.getState());  
-        }, 1000);
+        }, 1500);
     }
 
     handleStartClick() {
