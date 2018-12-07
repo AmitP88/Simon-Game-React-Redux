@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import store from '../store/store';
 import { connect } from 'react-redux';
 import { startClicked } from '../actions/StartButtonActions';
-import { incrementLevelCounter } from '../actions/LevelCounterActions';
-import { computerRedInput, computerGreenInput, computerBlueInput, computerPurpleInput } from '../actions/ComputerInputActions';
-import { playersTurn } from '../actions/TurnActions';
+import { incrementLevelCounter, resetLevelCounter } from '../actions/LevelCounterActions';
+import { computerRedInput, computerGreenInput, computerBlueInput, computerPurpleInput, clearComputerInput } from '../actions/ComputerInputActions';
+import { computersTurn, playersTurn } from '../actions/TurnActions';
+import { clearPlayerInput } from '../actions/PlayerInputActions';
 
 import {
     // when light square is clicked
@@ -85,10 +86,17 @@ class StartButton extends Component {
     }
 
     handleStartClick() {
-        if(this.props.OnOffSwitch && this.props.turn === 'computer'){
-            store.dispatch(startClicked());
-            this.initialComputersTurn();
-        }
+        store.dispatch(clearPlayerInput());
+        store.dispatch(clearComputerInput());
+        store.dispatch(resetLevelCounter());
+        store.dispatch(computersTurn());
+        setTimeout(() => {
+            if(this.props.OnOffSwitch && this.props.turn === 'computer'){
+                store.dispatch(startClicked());
+                this.initialComputersTurn();
+            }
+        }, 500);
+
     }
 
     render() {

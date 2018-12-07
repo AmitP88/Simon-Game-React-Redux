@@ -1,4 +1,4 @@
-import { COMPUTER_RED_INPUT, COMPUTER_GREEN_INPUT, COMPUTER_BLUE_INPUT, COMPUTER_PURPLE_INPUT } from '../actions/ComputerInputActions';
+import { COMPUTER_RED_INPUT, COMPUTER_GREEN_INPUT, COMPUTER_BLUE_INPUT, COMPUTER_PURPLE_INPUT, CLEAR_COMPUTER_INPUT } from '../actions/ComputerInputActions';
 import { initialState } from '../store/store';
 
 const ComputerInputReducer = (state = initialState, action) => {
@@ -18,6 +18,10 @@ const ComputerInputReducer = (state = initialState, action) => {
         case COMPUTER_PURPLE_INPUT:
             return {
                 computerInput: [...state.computerInput, action.payload]
+            }
+        case CLEAR_COMPUTER_INPUT:
+            return {
+                computerInput: []
             }
         default:
             return state;

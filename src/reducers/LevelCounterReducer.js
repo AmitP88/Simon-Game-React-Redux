@@ -1,4 +1,4 @@
-import { INCREMENT_LEVELCOUNTER } from '../actions/LevelCounterActions';
+import { INCREMENT_LEVELCOUNTER, RESET_LEVELCOUNTER } from '../actions/LevelCounterActions';
 import { initialState } from '../store/store';
 
 const LevelCounterReducer = (state = initialState, action) => {
@@ -13,6 +13,10 @@ const LevelCounterReducer = (state = initialState, action) => {
             }
         }
 
+    } else if(action.type === RESET_LEVELCOUNTER){
+        return {
+            levelCounter: ''
+        }
     } else {
         return state;
     }
