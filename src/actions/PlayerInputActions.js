@@ -3,6 +3,8 @@ export const PLAYER_GREEN_INPUT = 'PLAYER_GREEN_INPUT';
 export const PLAYER_BLUE_INPUT = 'PLAYER_BLUE_INPUT';
 export const PLAYER_PURPLE_INPUT = 'PLAYER_PURPLE_INPUT';
 
+export const CLEAR_PLAYER_INPUT = 'CLEAR_PLAYER_INPUT';
+
 // pushes chosen input into playerInput array in state
 export const playerRedInput = () => {
     return {
@@ -29,5 +31,11 @@ export const playerPurpleInput = () => {
     return {
         type: PLAYER_PURPLE_INPUT,
         payload: 'purple'
+    }
+}
+
+export const clearPlayerInput = () => {
+    return {
+        type: CLEAR_PLAYER_INPUT
     }
 }

@@ -12,7 +12,7 @@ import {
     blueReverted,
     purpleReverted
 } from '../actions/LightSquareActions';
-import { playerRedInput, playerGreenInput, playerBlueInput, playerPurpleInput } from '../actions/PlayerInputActions';
+import { playerRedInput, playerGreenInput, playerBlueInput, playerPurpleInput, clearPlayerInput } from '../actions/PlayerInputActions';
 import store from '../store/store';
 import { connect } from 'react-redux';
 
@@ -73,8 +73,9 @@ class LightsSquare extends Component {
                         console.log(this.props.computerInput[i]);
                 }                
             }, i * 500);
-
         }
+            // Clears playerInput array before starting players turn
+            store.dispatch(clearPlayerInput());
 
             // Ends computers turn and starts player turn
             store.dispatch(playersTurn());
