@@ -119,10 +119,26 @@ class LightsSquare extends Component {
 
         setTimeout(() => {
             console.log('playerInput : ', this.props.playerInput);
+
+            const moveMatch = (playerInput, computerInput) => {
+                playerInput = this.props.playerInput;
+                computerInput = this.props.computerInput;
+
+                for(let i = 0; i < playerInput.length; i++){
+                    if (playerInput[i] !== computerInput[i]){
+                        console.log('wrong move');
+                        store.dispatch(clearPlayerInput());
+                    }
+                }
+            };
+
+            moveMatch();
+            
             if(this.props.playerInput.length === this.props.computerInput.length){
                 store.dispatch(computersTurn());
                 this.computersTurn();            
-            }  
+            }
+
         }, 100);
 
     }
