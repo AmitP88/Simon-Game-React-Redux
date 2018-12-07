@@ -39,38 +39,43 @@ class LightsSquare extends Component {
             console.log(this.props.computerInput);
 
 
+
         /* loop through computerInput and press colored squares based on each index value */
         for(let i = 0; i < this.props.computerInput.length; i++){
             /* based on what input is in computerInput state,
                dispatch action that lights up corresponding colored square */
-            switch(this.props.computerInput[i]){
-                case 'red':
-                    store.dispatch(redClicked());
-                    setTimeout(() => {
-                        store.dispatch(redReverted());
-                    }, 300);
-                    break;
-                case 'green':
-                    store.dispatch(greenClicked());
-                    setTimeout(() => {
-                        store.dispatch(greenReverted());
-                    }, 300);
-                    break;
-                case 'blue':
-                    store.dispatch(blueClicked());
-                    setTimeout(() => {
-                        store.dispatch(blueReverted());
-                    }, 300);
-                    break;
-                case 'purple':
-                    store.dispatch(purpleClicked());
-                    setTimeout(() => {
-                        store.dispatch(purpleReverted());
-                    }, 300);
-                    break;
-                default:
-                    console.log(this.props.computerInput[i]);
-            }
+
+            setTimeout(() => {
+                switch(this.props.computerInput[i]){
+                    case 'red':
+                        store.dispatch(redClicked());
+                        setTimeout(() => {
+                            store.dispatch(redReverted());
+                        }, 300);
+                        break;
+                    case 'green':
+                        store.dispatch(greenClicked());
+                        setTimeout(() => {
+                            store.dispatch(greenReverted());
+                        }, 300);
+                        break;
+                    case 'blue':
+                        store.dispatch(blueClicked());
+                        setTimeout(() => {
+                            store.dispatch(blueReverted());
+                        }, 300);
+                        break;
+                    case 'purple':
+                        store.dispatch(purpleClicked());
+                        setTimeout(() => {
+                            store.dispatch(purpleReverted());
+                        }, 300);
+                        break;
+                    default:
+                        console.log(this.props.computerInput[i]);
+                }                
+            }, i * 500);
+
         }
 
             // Ends computers turn and starts player turn
