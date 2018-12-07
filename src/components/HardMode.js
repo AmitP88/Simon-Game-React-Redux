@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
+import store from '../store/store';
+import { connect } from 'react-redux';
+import { turnHardModeOn, turnHardModeOff } from '../actions/HardModeActions';
 
 class HardMode extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            hardmode: false
-        };
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange() {
-        if(this.state.hardmode === false) {
-            this.setState({ 
-                hardmode: true 
-            }, () => console.log(this.state.hardmode));
-        } else if (this.state.hardmode === true) {
-            this.setState({
-                hardmode: false
-            }, () => console.log(this.state.hardmode));
+        if(this.props.hardmode === false) {
+            store.dispatch(turnHardModeOn());
+            setTimeout(() => {
+                console.log(this.props.hardmode);
+            }, 100);
+
+        } else if (this.props.hardmode === true) {
+            store.dispatch(turnHardModeOff());
+            setTimeout(() => {
+                console.log(this.props.hardmode);
+            }, 100);
         }
     }
 
@@ -35,4 +38,10 @@ class HardMode extends Component {
     }
 }
 
-export default HardMode;
+export const mapStateToProps = (state) => {
+    return {
+        hardmode: state.HardModeReducer.hardmode
+    }
+}
+
+export default connect(mapStateToProps)(HardMode);

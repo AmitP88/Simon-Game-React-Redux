@@ -6,6 +6,7 @@ import StartButtonReducer from '../reducers/StartButtonReducer';
 import TurnReducer from '../reducers/TurnReducer';
 import LevelCounterReducer from '../reducers/LevelCounterReducer';
 import ComputerInputReducer from '../reducers/ComputerInputReducer';
+import HardModeReducer from '../reducers/HardModeReducer';
 import thunk from 'redux-thunk';
 
 export const initialState = {
@@ -32,7 +33,8 @@ export const store = createStore(
         StartButtonReducer,
         TurnReducer,
         LevelCounterReducer,
-        ComputerInputReducer
+        ComputerInputReducer,
+        HardModeReducer
     }),
     applyMiddleware(thunk)
 );
