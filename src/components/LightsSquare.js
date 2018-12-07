@@ -187,11 +187,6 @@ class LightsSquare extends Component {
                             }, 500);
                             this.computersTurn();
                         }
-                        
-
-
-
-
                     }
                 }
             };
