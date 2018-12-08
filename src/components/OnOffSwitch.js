@@ -3,6 +3,7 @@ import store from '../store/store';
 import { turnOn, turnOff } from '../actions/OnOffSwitchActions';
 import { resetLevelCounter } from '../actions/LevelCounterActions';
 import { levelCounter_default } from '../actions/LevelCounterBackgroundActions';
+import { computersTurn } from '../actions/TurnActions';
 
 class OnOffSwitch extends Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class OnOffSwitch extends Component {
             store.dispatch(turnOff());
             store.dispatch(resetLevelCounter());
             store.dispatch(levelCounter_default());
+            store.dispatch(computersTurn());
         }        
     }
 
