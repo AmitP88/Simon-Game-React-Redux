@@ -364,7 +364,10 @@ class LightsSquare extends Component {
 
                        setTimeout(() => {
                             store.dispatch(blueReverted());
+                            store.dispatch(resetLevelCounter());
+                            store.dispatch(levelCounter_default());                            
                        }, 6000);
+
 
                     }
 
