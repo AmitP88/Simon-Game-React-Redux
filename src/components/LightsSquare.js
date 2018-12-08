@@ -351,7 +351,7 @@ class LightsSquare extends Component {
 
             moveMatch();
 
-            if(this.props.playerInput.length === this.props.computerInput.length){
+            if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length < 21){
                 store.dispatch(computersTurn());
                 this.computersTurn();            
             }
