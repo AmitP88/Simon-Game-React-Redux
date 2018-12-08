@@ -202,7 +202,7 @@ class LightsSquare extends Component {
         }, 1500);
     }
 
-    playersTurn(e){        
+    playersTurn(e){
         switch(e.target.id){
             case 'red':
                 store.dispatch(redClicked());
@@ -336,6 +336,11 @@ class LightsSquare extends Component {
                     // Player completes level 20 and wins the game
                     if(playerInput.length === 20 && computerInput.length === 20 && playerInput[i] === computerInput[i]){
                         console.log('Victory Achieved!');
+                        store.dispatch(redClicked());
+                        store.dispatch(greenClicked());
+                        store.dispatch(blueClicked());
+                        store.dispatch(purpleClicked());
+
                     }
 
 
@@ -351,7 +356,7 @@ class LightsSquare extends Component {
 
             moveMatch();
 
-            if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length < 21){
+            if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length <= 19){
                 store.dispatch(computersTurn());
                 this.computersTurn();            
             }
