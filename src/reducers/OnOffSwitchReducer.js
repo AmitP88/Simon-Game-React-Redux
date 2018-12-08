@@ -2,16 +2,17 @@ import { ON, OFF } from '../actions/OnOffSwitchActions';
 import { initialState } from '../store/store';
 
 const OnOffSwitchReducer = (state = initialState, action) => {
-    if(action.type === ON){
-        return {
-            on: true
-        };
-    } else if(action.type === OFF){
-        return {
-            on: false
-        }
-    } else {
-        return state;
+    switch(action.type){
+        case ON:
+            return {
+                on: true
+            }
+        case OFF:
+            return {
+                on: false
+            }
+        default:
+            return state;
     }
 }
 
