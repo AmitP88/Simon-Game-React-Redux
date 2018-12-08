@@ -334,12 +334,35 @@ class LightsSquare extends Component {
                     }
 
                     // Player completes level 20 and wins the game
-                    if(playerInput.length === 20 && computerInput.length === 20 && playerInput[i] === computerInput[i]){
+                    if(playerInput.length === 2 && computerInput.length === 2 && playerInput[i] === computerInput[i]){
                         console.log('Victory Achieved!');
-                        store.dispatch(redClicked());
-                        store.dispatch(greenClicked());
-                        store.dispatch(blueClicked());
-                        store.dispatch(purpleClicked());
+
+                        const victory = () => {
+                            setTimeout(() => {
+                                store.dispatch(redClicked());
+                            }, 200);
+                            setTimeout(() => {
+                                store.dispatch(greenClicked());
+                            }, 400);
+                            setTimeout(() => {
+                                store.dispatch(purpleClicked());
+                            }, 600);
+                            setTimeout(() => {
+                                store.dispatch(blueClicked());
+                            }, 800); 
+                                                  
+                        }
+
+                        let interval = setInterval(victory, 700);
+
+                        setTimeout(() => {
+                            clearInterval(interval);
+                            setTimeout(() => {
+                                store.dispatch(blueReverted());
+                            }, 100);
+                        }, 5000);
+
+                       
 
                     }
 
@@ -356,7 +379,7 @@ class LightsSquare extends Component {
 
             moveMatch();
 
-            if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length <= 19){
+            if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length <= 1){
                 store.dispatch(computersTurn());
                 this.computersTurn();            
             }
