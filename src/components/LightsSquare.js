@@ -157,37 +157,37 @@ class LightsSquare extends Component {
                         store.dispatch(redClicked());
                         setTimeout(() => {
                             this.soundRed.play();
-                        }, 300);
+                        }, 400);
                         setTimeout(() => {
                             store.dispatch(redReverted());
-                        }, 300);
+                        }, 400);
                         break;
                     case 'green':
                         store.dispatch(greenClicked());
                         setTimeout(() => {
                             this.soundGreen.play();
-                        }, 300);
+                        }, 400);
                         setTimeout(() => {
                             store.dispatch(greenReverted());
-                        }, 300);
+                        }, 400);
                         break;
                     case 'blue':
                         store.dispatch(blueClicked());
                         setTimeout(() => {
                             this.soundBlue.play();
-                        }, 300);
+                        }, 400);
                         setTimeout(() => {
                             store.dispatch(blueReverted());
-                        }, 300);
+                        }, 400);
                         break;
                     case 'purple':
                         store.dispatch(purpleClicked());
                         setTimeout(() => {
                             this.soundPurple.play();
-                        }, 300);
+                        }, 400);
                         setTimeout(() => {
                             store.dispatch(purpleReverted());
-                        }, 300);
+                        }, 400);
                         break;
                     default:
                         console.log(this.props.computerInput[i]);
@@ -208,41 +208,41 @@ class LightsSquare extends Component {
                 store.dispatch(redClicked());
                 setTimeout(() => {
                     this.soundRed.play();
-                }, 300);
+                }, 400);
                 store.dispatch(playerRedInput());
                 setTimeout(() => {
                     store.dispatch(redReverted());
-                }, 300);
+                }, 400);
                 break;
             case 'green':
                 store.dispatch(greenClicked());
                 setTimeout(() => {
                     this.soundGreen.play();
-                }, 300);
+                }, 400);
                 store.dispatch(playerGreenInput());
                 setTimeout(() => {
                     store.dispatch(greenReverted());
-                }, 300);
+                }, 400);
                 break;
             case 'blue':
                 store.dispatch(blueClicked());
                 setTimeout(() => {
                     this.soundBlue.play();
-                }, 300);
+                }, 400);
                 store.dispatch(playerBlueInput());
                 setTimeout(() => {
                     store.dispatch(blueReverted());
-                }, 300);
+                }, 400);
                 break;
             case 'purple':
                 store.dispatch(purpleClicked());
                 setTimeout(() => {
                     this.soundPurple.play();
-                }, 300);
+                }, 400);
                 store.dispatch(playerPurpleInput());
                 setTimeout(() => {
                     store.dispatch(purpleReverted());
-                }, 300);
+                }, 400);
                 break;
             default:
                 console.log(e.target.id);
@@ -285,37 +285,37 @@ class LightsSquare extends Component {
                                                 store.dispatch(redClicked());
                                                 setTimeout(() => {
                                                     this.soundRed.play();
-                                                }, 300);
+                                                }, 400);
                                                 setTimeout(() => {
                                                     store.dispatch(redReverted());
-                                                }, 300);
+                                                }, 400);
                                                 break;
                                             case 'green':
                                                 store.dispatch(greenClicked());
                                                 setTimeout(() => {
                                                     this.soundGreen.play();
-                                                }, 300);
+                                                }, 400);
                                                 setTimeout(() => {
                                                     store.dispatch(greenReverted());
-                                                }, 300);
+                                                }, 400);
                                                 break;
                                             case 'blue':
                                                 store.dispatch(blueClicked());
                                                 setTimeout(() => {
                                                     this.soundBlue.play();
-                                                }, 300);
+                                                }, 400);
                                                 setTimeout(() => {
                                                     store.dispatch(blueReverted());
-                                                }, 300);
+                                                }, 400);
                                                 break;
                                             case 'purple':
                                                 store.dispatch(purpleClicked());
                                                 setTimeout(() => {
                                                     this.soundPurple.play();
-                                                }, 300);
+                                                }, 400);
                                                 setTimeout(() => {
                                                     store.dispatch(purpleReverted());
-                                                }, 300);
+                                                }, 400);
                                                 break;
                                             default:
                                                 console.log(this.props.computerInput[i]);
@@ -332,6 +332,17 @@ class LightsSquare extends Component {
                             this.computersTurn();
                         }
                     }
+
+
+
+
+
+
+
+
+
+
+
                 }
             };
 
