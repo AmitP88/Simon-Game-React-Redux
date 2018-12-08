@@ -60,6 +60,16 @@ html,body {
   background-color: red;
 }
 
+.Simon-victory {
+  z-index: 1;
+  position: absolute;
+  top: 33%;
+  left: 30%;
+  border: 1px solid black;
+  background-color: black;
+  color: #FF00FF;
+}
+
 /* Control Box*/
 .Controls {
   position: absolute;

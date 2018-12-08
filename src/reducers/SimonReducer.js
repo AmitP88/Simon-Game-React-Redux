@@ -1,4 +1,4 @@
-import { SIMON, SIMON_WRONGMOVE } from '../actions/SimonActions';
+import { SIMON, SIMON_WRONGMOVE, SIMON_VICTORY } from '../actions/SimonActions';
 import { initialState } from '../store/store';
 
 const SimonReducer = (state = initialState, action) => {
@@ -10,6 +10,10 @@ const SimonReducer = (state = initialState, action) => {
         case SIMON_WRONGMOVE:
             return {
                 Simon: 'Simon-wrongMove'
+            }
+        case SIMON_VICTORY:
+            return {
+                Simon: 'Simon-victory'
             }
         default:
             return state;
