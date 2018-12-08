@@ -322,7 +322,7 @@ class LightsSquare extends Component {
                     }
 
                     // Player completes level 20 and wins the game
-                    if(playerInput.length === 2 && computerInput.length === 2 && playerInput[i] === computerInput[i]){
+                    if(playerInput.length === 20 && computerInput.length === 20 && playerInput[i] === computerInput[i]){
                         console.log('Victory Achieved!');
 
                         const victory = () => {
@@ -372,7 +372,7 @@ class LightsSquare extends Component {
 
             moveMatch();
 
-            if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length <= 1){
+            if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length <= 19){
                 store.dispatch(computersTurn());
                 this.computersTurn();          
             }
