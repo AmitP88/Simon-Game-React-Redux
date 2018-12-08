@@ -51,6 +51,15 @@ html,body {
   background-color: white;
 }
 
+.Simon-wrongMove {
+  z-index: 1;
+  position: absolute;
+  top: 33%;
+  left: 33%;
+  border: 1px solid black;
+  background-color: red;
+}
+
 /* Control Box*/
 .Controls {
   position: absolute;

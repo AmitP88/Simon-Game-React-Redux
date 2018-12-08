@@ -22,6 +22,8 @@ import { randomComputerInput } from '../components/StartButton';
 
 import { clearComputerInput } from '../actions/ComputerInputActions';
 
+import { simon, simonWrongMove } from '../actions/SimonActions';
+
 import simonSound1 from '../sounds/simonSound1.mp3';
 import simonSound2 from '../sounds/simonSound2.mp3';
 import simonSound3 from '../sounds/simonSound3.mp3';
@@ -170,7 +172,13 @@ class LightsSquare extends Component {
                     /** If player makes a wrong move (a move that is different than computers move),
                         resets playerInput back to an empty array */ 
                     if (playerInput[i] !== computerInput[i]){
-                        console.log('wrong move');
+                        
+                        store.dispatch(simonWrongMove());
+
+                        setTimeout(() => {
+                            store.dispatch(simon());
+                        }, 300);
+
                         store.dispatch(clearPlayerInput());
 
                         // If on EASY mode, computer replays current computerInput array button presses
