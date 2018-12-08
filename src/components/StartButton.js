@@ -55,11 +55,7 @@ class StartButton extends Component {
         setTimeout(() => {
             /* increment levelCounter & change levelCounter background color */
             store.dispatch(incrementLevelCounter());
-
-            setTimeout(() => {
-                store.dispatch(levelCounter_1());
-            }, 100);
-
+            store.dispatch(levelCounter_1());
         }, 500);
      
         setTimeout(() => {

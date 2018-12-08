@@ -72,74 +72,71 @@ class LightsSquare extends Component {
         setTimeout(() => {
             /* increment levelCounter & change levelCounter background color */
                 store.dispatch(incrementLevelCounter());
-
-                setTimeout(() => {
-                    switch(this.props.levelCounter){
-                        case 1:
-                            store.dispatch(levelCounter_1());
-                            break;
-                        case 2:
-                            store.dispatch(levelCounter_2());
-                            break;
-                        case 3:
-                            store.dispatch(levelCounter_3());
-                            break;
-                        case 4:
-                            store.dispatch(levelCounter_4());
-                            break;
-                        case 5:
-                            store.dispatch(levelCounter_5());
-                            break;
-                        case 6:
-                            store.dispatch(levelCounter_6());
-                            break;
-                        case 7:
-                            store.dispatch(levelCounter_7());
-                            break;
-                        case 8:
-                            store.dispatch(levelCounter_8());
-                            break;
-                        case 9:
-                            store.dispatch(levelCounter_9());
-                            break;
-                        case 10:
-                            store.dispatch(levelCounter_10());
-                            break;
-                        case 11:
-                            store.dispatch(levelCounter_11());
-                            break;
-                        case 12:
-                            store.dispatch(levelCounter_12());
-                            break;
-                        case 13:
-                            store.dispatch(levelCounter_13());
-                            break;
-                        case 14:
-                            store.dispatch(levelCounter_14());
-                            break;
-                        case 15:
-                            store.dispatch(levelCounter_15());
-                            break;
-                        case 16:
-                            store.dispatch(levelCounter_16());
-                            break;
-                        case 17:
-                            store.dispatch(levelCounter_17());
-                            break;
-                        case 18:
-                            store.dispatch(levelCounter_18());
-                            break;
-                        case 19:
-                            store.dispatch(levelCounter_19());
-                            break;
-                        case 20:
-                            store.dispatch(levelCounter_20());
-                            break;
-                        default:
-                            store.dispatch(levelCounter_default());
-                            break;
-                    }
-                }, 100);
+                switch(this.props.levelCounter){
+                    case 1:
+                        store.dispatch(levelCounter_1());
+                        break;
+                    case 2:
+                        store.dispatch(levelCounter_2());
+                        break;
+                    case 3:
+                        store.dispatch(levelCounter_3());
+                        break;
+                    case 4:
+                        store.dispatch(levelCounter_4());
+                        break;
+                    case 5:
+                        store.dispatch(levelCounter_5());
+                        break;
+                    case 6:
+                        store.dispatch(levelCounter_6());
+                        break;
+                    case 7:
+                        store.dispatch(levelCounter_7());
+                        break;
+                    case 8:
+                        store.dispatch(levelCounter_8());
+                        break;
+                    case 9:
+                        store.dispatch(levelCounter_9());
+                        break;
+                    case 10:
+                        store.dispatch(levelCounter_10());
+                        break;
+                    case 11:
+                        store.dispatch(levelCounter_11());
+                        break;
+                    case 12:
+                        store.dispatch(levelCounter_12());
+                        break;
+                    case 13:
+                        store.dispatch(levelCounter_13());
+                        break;
+                    case 14:
+                        store.dispatch(levelCounter_14());
+                        break;
+                    case 15:
+                        store.dispatch(levelCounter_15());
+                        break;
+                    case 16:
+                        store.dispatch(levelCounter_16());
+                        break;
+                    case 17:
+                        store.dispatch(levelCounter_17());
+                        break;
+                    case 18:
+                        store.dispatch(levelCounter_18());
+                        break;
+                    case 19:
+                        store.dispatch(levelCounter_19());
+                        break;
+                    case 20:
+                        store.dispatch(levelCounter_20());
+                        break;
+                    default:
+                        store.dispatch(levelCounter_default());
+                        break;
+                }
         }, 1000);
 
         setTimeout(() => {
