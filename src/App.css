@@ -17,6 +17,7 @@ html,body {
 
 footer {
   padding: 5%;
+  margin-top: 5%;
 }
 
 .builtWith {
@@ -34,10 +35,11 @@ footer {
 
 .fa-4x {
   color: black;
+  margin-top: 5%;
 }
 
 .fa-github:hover {
-  color: rgb(85, 26, 139);
+  color: #FF00FF;
 }
 
 .github-profile-link {

@@ -5,6 +5,7 @@ import Controls from './components/Controls';
 import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import 'font-awesome/css/font-awesome.min.css';
 
 class App extends Component {
   render() {
@@ -21,7 +22,5 @@ class App extends Component {
     );
   }
 }
-
-// <img src={logo} className="App-logo" alt="logo" />
 
 export default App;
