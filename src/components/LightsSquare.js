@@ -333,7 +333,10 @@ class LightsSquare extends Component {
                         }
                     }
 
-
+                    // Player completes level 20 and wins the game
+                    if(playerInput.length === 20 && computerInput.length === 20 && playerInput[i] === computerInput[i]){
+                        console.log('Victory Achieved!');
+                    }
 
 
 
