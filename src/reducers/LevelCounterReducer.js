@@ -2,23 +2,23 @@ import { INCREMENT_LEVELCOUNTER, RESET_LEVELCOUNTER } from '../actions/LevelCoun
 import { initialState } from '../store/store';
 
 const LevelCounterReducer = (state = initialState, action) => {
-    if(action.type === INCREMENT_LEVELCOUNTER){
-        if(state.levelCounter === '') {
-            return {
-                levelCounter: 1
-            }            
-        } else {
-            return {
-                levelCounter: state.levelCounter + 1
+    switch(action.type){
+        case INCREMENT_LEVELCOUNTER:
+            if(state.levelCounter === '') {
+                return {
+                    levelCounter: 1
+                }            
+            } else {
+                return {
+                    levelCounter: state.levelCounter + 1
+                }
             }
-        }
-
-    } else if(action.type === RESET_LEVELCOUNTER){
-        return {
-            levelCounter: ''
-        }
-    } else {
-        return state;
+        case RESET_LEVELCOUNTER:
+            return {
+                levelCounter: ''
+            }
+            default:
+                return state;
     }
 }
 
