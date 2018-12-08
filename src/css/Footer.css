@@ -1,0 +1,58 @@
+footer {
+    padding: 5%;
+    margin-top: 15%;
+    width: 560px;
+    margin: 0 auto;
+  }
+  
+  .builtWith {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .developedBy {
+    color: white;
+  }
+  
+  .fa-github {
+    color: whitesmoke;
+  }
+  
+  .fa-4x {
+    color: black;
+    margin-top: 10%;
+  }
+  
+  .fa-github:hover {
+    color: #FF00FF;
+  }
+  
+  .github-profile-link {
+    text-decoration-line: none;
+    font-weight: bold;
+    color: #5DFC0A;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    /* height: 10vmin; */
+  }
+  
+  .react-logo {
+    width: 80px;
+    height: 80px
+  }
+  
+  .redux-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

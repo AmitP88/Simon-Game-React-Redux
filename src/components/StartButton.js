@@ -15,6 +15,8 @@ import simonSound2 from '../sounds/simonSound2.mp3';
 import simonSound3 from '../sounds/simonSound3.mp3';
 import simonSound4 from '../sounds/simonSound4.mp3';
 
+import '../css/StartButton.css';
+
 import {
     // when light square is clicked
     redClicked,

@@ -5,6 +5,8 @@ import LevelCounter from './LevelCounter';
 import HardMode from './HardMode';
 import Simon from './Simon';
 
+import '../css/Controls.css';
+
 class Controls extends Component {
     render() {
         return (

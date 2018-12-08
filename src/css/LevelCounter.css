@@ -1,0 +1,43 @@
+.LevelCounter-container {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 0 108%;
+    bottom: 100%;
+  }
+  
+  .LevelCounter {
+    position: relative;
+    top: 35px;
+    left: 65px;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    transform: rotate(45deg);
+  }
+  
+  .LevelCounter-label {
+    position: relative;
+    top: 50px;
+    left: 15px;
+    font-weight: bold;
+  }
+  
+  .counter-below10 {
+    transform: rotate(-45deg);
+    position: relative;
+    right: 20px;
+    top: 5px;
+    float: right;
+    font-size: 30px;
+  }
+  
+  .counter-after10 {
+    transform: rotate(-45deg);
+    position: relative;
+    right: 12px;
+    top: 5px;
+    float: right;
+    font-size: 30px;
+  }
+  

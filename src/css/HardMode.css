@@ -1,0 +1,30 @@
+.HardMode-container {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 108% 0;
+    border-left: 1px solid black;
+    bottom: 200%;
+    left: 50%;
+  }
+  
+  .hardmode {
+    transform: rotate(-90deg);
+    position: relative;
+    top: 55px;
+    left: -10px;
+  }
+  
+  .easy {
+    position: relative;
+    left: 37px;
+    font-weight: bold;
+    bottom: -100px;
+  }
+  
+  .hard {
+    position: relative;
+    right: 57px;
+    top: 20px;
+    font-weight: bold;
+  }

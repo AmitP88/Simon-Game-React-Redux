@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import '../css/LevelCounter.css';
+import '../css/LevelCounterBackgrounds.css';
+
 class LevelCounter extends Component {
     render() {
         return (

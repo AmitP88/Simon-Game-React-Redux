@@ -3,6 +3,8 @@ import react from '../react.svg';
 import redux from '../redux.svg';
 import Tooltip from "react-simple-tooltip";
 
+import '../css/Footer.css';
+
 class Footer extends Component {
     render() {
       return (

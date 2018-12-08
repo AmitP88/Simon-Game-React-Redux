@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import '../css/LightsSquare.css';
+
 import {
     // when light square is clicked
     redClicked,

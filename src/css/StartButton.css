@@ -1,0 +1,46 @@
+.StartButton-container {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 108% 0 0;
+    bottom: 100%;
+    left: 50%;
+    /* border-left: 1px solid black; */
+    border-bottom: 1px solid black;
+  }
+  
+  .StartButton {
+    background-color: #ccc;
+    position: relative;
+    top: 55px;
+    right: 10px;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-weight: bold;
+  }
+  
+  .StartButton:focus {
+    outline: none;
+  }
+  
+  .StartButton:hover {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  /* Ripple effect */
+  .ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }

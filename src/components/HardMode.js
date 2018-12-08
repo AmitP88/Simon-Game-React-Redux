@@ -3,6 +3,8 @@ import store from '../store/store';
 import { connect } from 'react-redux';
 import { turnHardModeOn, turnHardModeOff } from '../actions/HardModeActions';
 
+import '../css/HardMode.css';
+
 class HardMode extends Component {
     constructor(props) {
         super(props);
