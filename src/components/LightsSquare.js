@@ -363,6 +363,8 @@ class LightsSquare extends Component {
                             store.dispatch(resetLevelCounter());
                             // resets level counter background back to default color
                             store.dispatch(levelCounter_default());
+                            // sets game state back to computers turn
+                            store.dispatch(computersTurn());
                        }, 6000);
                     }
                 }
