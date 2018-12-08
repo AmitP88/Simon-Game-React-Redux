@@ -44,6 +44,9 @@ import {
     levelCounter_19,
     levelCounter_20
 } from '../actions/LevelCounterBackgroundActions';
+
+import { counterBelow10, counterAfter10 } from '../actions/CounterClassActions';
+
 import simonSound1 from '../sounds/simonSound1.mp3';
 import simonSound2 from '../sounds/simonSound2.mp3';
 import simonSound3 from '../sounds/simonSound3.mp3';
@@ -66,6 +69,11 @@ class LightsSquare extends Component {
         setTimeout(() => {
             /* increment levelCounter & change levelCounter background color */
                 store.dispatch(incrementLevelCounter());
+                
+                if(this.props.levelCounter > 9){
+                    store.dispatch(counterAfter10());
+                }
+
                 switch(this.props.levelCounter){
                     case 1:
                         store.dispatch(levelCounter_1());
@@ -363,6 +371,8 @@ class LightsSquare extends Component {
                             store.dispatch(resetLevelCounter());
                             // resets level counter background back to default color
                             store.dispatch(levelCounter_default());
+                            // resets counterClass
+                            store.dispatch(counterBelow10());
                             // sets game state back to computers turn
                             store.dispatch(computersTurn());
                        }, 6000);

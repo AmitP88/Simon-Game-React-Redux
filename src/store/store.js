@@ -10,12 +10,14 @@ import HardModeReducer from '../reducers/HardModeReducer';
 import SimonReducer from '../reducers/SimonReducer';
 import LevelCounterBackgroundReducer from '../reducers/LevelCounterBackgroundReducer';
 import SimonMessageReducer from '../reducers/SimonMessageReducer';
+import CounterClassReducer from '../reducers/CounterClassReducer';
 import thunk from 'redux-thunk';
 
 export const initialState = {
     on: false,
     startClicked: false,
     levelCounter: '',
+    counterClass: 'counter-below10', 
     hardmode: false,
     computerInput : [],
     playerInput : [],
@@ -43,7 +45,8 @@ export const store = createStore(
         HardModeReducer,
         SimonReducer,
         LevelCounterBackgroundReducer,
-        SimonMessageReducer
+        SimonMessageReducer,
+        CounterClassReducer
     }),
     applyMiddleware(thunk)
 );

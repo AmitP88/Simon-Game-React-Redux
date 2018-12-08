@@ -331,10 +331,19 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
-.counter {
+.counter-below10 {
   transform: rotate(-45deg);
   position: relative;
   right: 20px;
+  top: 5px;
+  float: right;
+  font-size: 30px;
+}
+
+.counter-after10 {
+  transform: rotate(-45deg);
+  position: relative;
+  right: 12px;
   top: 5px;
   float: right;
   font-size: 30px;
