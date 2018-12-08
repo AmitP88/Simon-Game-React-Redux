@@ -18,6 +18,8 @@ html,body {
 footer {
   padding: 5%;
   margin-top: 15%;
+  width: 560px;
+  margin: 0 auto;
 }
 
 .builtWith {
