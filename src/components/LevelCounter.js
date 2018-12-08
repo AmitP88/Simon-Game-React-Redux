@@ -5,7 +5,7 @@ class LevelCounter extends Component {
     render() {
         return (
             <div className="LevelCounter-container">
-                <div className="LevelCounter">
+                <div className={this.props.levelCounterBackground}>
                     <div className="counter">{this.props.levelCounter}</div>
                 </div>
                 <div className="LevelCounter-label">Level</div>
@@ -16,7 +16,8 @@ class LevelCounter extends Component {
 
 export const mapStateToProps = (state) => {
     return {
-        levelCounter: state.LevelCounterReducer.levelCounter
+        levelCounter: state.LevelCounterReducer.levelCounter,
+        levelCounterBackground: state.LevelCounterBackgroundReducer.levelCounterBackground
     }
 }
 
