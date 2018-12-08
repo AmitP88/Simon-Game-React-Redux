@@ -15,17 +15,12 @@ import {
 import { playerRedInput, playerGreenInput, playerBlueInput, playerPurpleInput, clearPlayerInput } from '../actions/PlayerInputActions';
 import store from '../store/store';
 import { connect } from 'react-redux';
-
 import { computersTurn ,playersTurn } from '../actions/TurnActions';
 import { incrementLevelCounter, resetLevelCounter } from '../actions/LevelCounterActions';
 import { randomComputerInput } from '../components/StartButton';
-
 import { clearComputerInput } from '../actions/ComputerInputActions';
-
 import { simon, simonWrongMove, simonVictory } from '../actions/SimonActions';
-
 import { simonMessageDefault ,simonMessageVictory } from '../actions/SimonMessageActions';
-
 import {
     levelCounter_default,
     levelCounter_1,
@@ -49,13 +44,10 @@ import {
     levelCounter_19,
     levelCounter_20
 } from '../actions/LevelCounterBackgroundActions';
-
 import simonSound1 from '../sounds/simonSound1.mp3';
 import simonSound2 from '../sounds/simonSound2.mp3';
 import simonSound3 from '../sounds/simonSound3.mp3';
 import simonSound4 from '../sounds/simonSound4.mp3';
-
-
 
 class LightsSquare extends Component {
     constructor(props) {
@@ -145,8 +137,6 @@ class LightsSquare extends Component {
         /* dispatch a random colorInput */
             store.dispatch(randomComputerInput());
             console.log('computerInput : ', this.props.computerInput);
-
-
 
         /* loop through computerInput and press colored squares based on each index value */
         for(let i = 0; i < this.props.computerInput.length; i++){
@@ -353,10 +343,7 @@ class LightsSquare extends Component {
                             }, 600);
                             setTimeout(() => {
                                 store.dispatch(blueClicked());
-                            }, 800);
-
-                           
-                                                  
+                            }, 800);                       
                         }
 
                         let interval = setInterval(victory, 700);
@@ -365,26 +352,30 @@ class LightsSquare extends Component {
                             clearInterval(interval);
                         }, 5000);
 
-
                        setTimeout(() => {
+                           // changes message from Victory! back to Simon
                             store.dispatch(simonMessageDefault());
+                            // changes style of message back to default
                             store.dispatch(simon());
+                            // unclicks blue button after victory function ends
                             store.dispatch(blueReverted());
+                            // clears players move history
+                            store.dispatch(clearPlayerInput());
+                            // clears computers move history
+                            store.dispatch(clearComputerInput());
+                            // resets the level back to default ''
                             store.dispatch(resetLevelCounter());
-                            store.dispatch(levelCounter_default());                            
+                            // resets level counter background back to default color
+                            store.dispatch(levelCounter_default());
+                            
+                            // changes turn state to 'computer'
+                            store.dispatch(computersTurn());
+                            // // starts the computers turn for a new game
+                            // this.computersTurn(); 
                        }, 6000);
 
-
+                       
                     }
-
-
-
-
-
-
-
-
-
                 }
             };
 
@@ -392,11 +383,9 @@ class LightsSquare extends Component {
 
             if(this.props.playerInput.length === this.props.computerInput.length && this.props.computerInput.length <= 1){
                 store.dispatch(computersTurn());
-                this.computersTurn();            
+                this.computersTurn();          
             }
-
         }, 100);
-
     }
 
     render() {
