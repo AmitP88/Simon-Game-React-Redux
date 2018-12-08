@@ -14,15 +14,15 @@ class HardMode extends Component {
     handleChange() {
         if(this.props.hardmode === false) {
             store.dispatch(turnHardModeOn());
-            setTimeout(() => {
-                console.log(this.props.hardmode);
-            }, 100);
+            // setTimeout(() => {
+            //     console.log(this.props.hardmode);
+            // }, 100);
 
         } else if (this.props.hardmode === true) {
             store.dispatch(turnHardModeOff());
-            setTimeout(() => {
-                console.log(this.props.hardmode);
-            }, 100);
+            // setTimeout(() => {
+            //     console.log(this.props.hardmode);
+            // }, 100);
         }
     }
 

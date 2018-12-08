@@ -147,7 +147,7 @@ class LightsSquare extends Component {
         setTimeout(() => {
         /* dispatch a random colorInput */
             store.dispatch(randomComputerInput());
-            console.log('computerInput : ', this.props.computerInput);
+            // console.log('computerInput : ', this.props.computerInput);
 
         /* loop through computerInput and press colored squares based on each index value */
         for(let i = 0; i < this.props.computerInput.length; i++){
@@ -193,7 +193,8 @@ class LightsSquare extends Component {
                         }, 400);
                         break;
                     default:
-                        console.log(this.props.computerInput[i]);
+                        // console.log(this.props.computerInput[i]);
+                        console.log('computers turn');
                 }                
             }, i * 500);
         }
@@ -253,7 +254,7 @@ class LightsSquare extends Component {
         }
 
         setTimeout(() => {
-            console.log('playerInput : ', this.props.playerInput);
+            // console.log('playerInput : ', this.props.playerInput);
 
             // Checks to see if players moves are the same as the computers moves
             const moveMatch = (playerInput, computerInput) => {
@@ -317,7 +318,8 @@ class LightsSquare extends Component {
                                                 }, 400);
                                                 break;
                                             default:
-                                                console.log(this.props.computerInput[i]);
+                                                // console.log(this.props.computerInput[i]);
+                                                console.log('computers turn');
                                         }                
                                     }, i * 500);
                                 }

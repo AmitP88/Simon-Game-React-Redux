@@ -104,7 +104,7 @@ class StartButton extends Component {
             /* change turn state to 'player', ending computers turn */
             store.dispatch(playersTurn());
 
-            console.log(store.getState());  
+            // console.log(store.getState());  
         }, 1500);
     }
 
