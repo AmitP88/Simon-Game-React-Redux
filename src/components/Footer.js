@@ -8,7 +8,7 @@ class Footer extends Component {
       return (
         <footer>
           <div className="builtWith">
-            Built with <Tooltip content="React"><img src={react} className="App-logo" alt="logo" /></Tooltip><Tooltip content="Redux"><img src={redux} className="App-logo" alt="logo" /></Tooltip>
+            Built with <Tooltip content="React"><img src={react} className="App-logo react-logo" alt="logo" /></Tooltip><Tooltip content="Redux"><img src={redux} className="App-logo redux-logo" alt="logo" /></Tooltip>
           </div>
             
             <a href="https://github.com/AmitP88/Simon-Game-React-Redux" target="_blank" rel="noopener noreferrer">

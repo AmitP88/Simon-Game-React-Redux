@@ -52,7 +52,17 @@ footer {
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 10vmin;
+  /* height: 10vmin; */
+}
+
+.react-logo {
+  width: 80px;
+  height: 80px
+}
+
+.redux-logo {
+  width: 50px;
+  height: 50px;
 }
 
 @keyframes App-logo-spin {
@@ -69,7 +79,7 @@ footer {
   position: relative;
   width: 600px;
   margin: 0 auto;
-  margin-bottom: 30%;
+  margin-bottom: 20%;
 }
 
 .LightsSquare-container {
