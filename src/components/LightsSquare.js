@@ -253,15 +253,11 @@ class LightsSquare extends Component {
                     /** If player makes a wrong move (a move that is different than computers move),
                         resets playerInput back to an empty array */ 
                     if (playerInput[i] !== computerInput[i]){
-                        
                         store.dispatch(simonWrongMove());
-
                         setTimeout(() => {
                             store.dispatch(simon());
                         }, 300);
-
                         store.dispatch(clearPlayerInput());
-
                         // If on EASY mode, computer replays current computerInput array button presses
                         if(this.props.hardmode === false) {
                             // plays computers move again
@@ -367,14 +363,7 @@ class LightsSquare extends Component {
                             store.dispatch(resetLevelCounter());
                             // resets level counter background back to default color
                             store.dispatch(levelCounter_default());
-                            
-                            // changes turn state to 'computer'
-                            store.dispatch(computersTurn());
-                            // // starts the computers turn for a new game
-                            // this.computersTurn(); 
                        }, 6000);
-
-                       
                     }
                 }
             };
