@@ -349,7 +349,9 @@ class LightsSquare extends Component {
                             }, 600);
                             setTimeout(() => {
                                 store.dispatch(blueClicked());
-                            }, 800); 
+                            }, 800);
+
+                           
                                                   
                         }
 
@@ -357,12 +359,12 @@ class LightsSquare extends Component {
 
                         setTimeout(() => {
                             clearInterval(interval);
-                            setTimeout(() => {
-                                store.dispatch(blueReverted());
-                            }, 100);
                         }, 5000);
 
-                       
+
+                       setTimeout(() => {
+                            store.dispatch(blueReverted());
+                       }, 6000);
 
                     }
 
