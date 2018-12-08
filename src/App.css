@@ -15,19 +15,49 @@ html,body {
   text-align: center;
 }
 
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-} */
+footer {
+  padding: 5%;
+}
 
-/* @keyframes App-logo-spin {
+.builtWith {
+  font-weight: bold;
+  color: white;
+}
+
+.developedBy {
+  color: white;
+}
+
+.fa-github {
+  color: whitesmoke;
+}
+
+.fa-4x {
+  color: black;
+}
+
+.fa-github:hover {
+  color: rgb(85, 26, 139);
+}
+
+.github-profile-link {
+  text-decoration-line: none;
+  font-weight: bold;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+}
+
+@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
 /* Gamepad */
 .gamepad {

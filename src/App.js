@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import LightsSquare from './components/LightsSquare';
 import Controls from './components/Controls';
-
+import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
@@ -16,6 +15,7 @@ class App extends Component {
             <LightsSquare />
             <Controls />
           </div>
+          <Footer />
         </div>      
       </Provider>
     );
