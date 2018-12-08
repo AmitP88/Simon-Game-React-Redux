@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import store from '../store/store';
 import { turnOn, turnOff } from '../actions/OnOffSwitchActions';
 import { resetLevelCounter } from '../actions/LevelCounterActions';
-import { turnHardModeOff } from '../actions/HardModeActions';
+import { levelCounter_default } from '../actions/LevelCounterBackgroundActions';
 
 class OnOffSwitch extends Component {
     constructor(props) {
@@ -16,7 +16,7 @@ class OnOffSwitch extends Component {
         } else {
             store.dispatch(turnOff());
             store.dispatch(resetLevelCounter());
-            // store.dispatch(turnHardModeOff());
+            store.dispatch(levelCounter_default());
         }        
     }
 
