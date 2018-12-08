@@ -24,126 +24,126 @@ export const LEVELCOUNTER_20 = 'LEVELCOUNTER_20';
 
 export const levelCounter_default = () => {
     return {
-        levelCounterBackground: 'LevelCounter'
+        type: LEVELCOUNTER_DEFAULT
     }
 }
 
 export const levelCounter_1 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-1'
+        type: LEVELCOUNTER_1
     }
 }
 
 export const levelCounter_2 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-2'
+        type: LEVELCOUNTER_2
     }
 }
 
 export const levelCounter_3 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-3'
+        type: LEVELCOUNTER_3
     }
 }
 
 export const levelCounter_4 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-4'
+        type: LEVELCOUNTER_4
     }
 }
 
 export const levelCounter_5 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-5'
+        type: LEVELCOUNTER_5
     }
 }
 
 export const levelCounter_6 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-6'
+        type: LEVELCOUNTER_6
     }
 }
 
 export const levelCounter_7 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-7'
+        type: LEVELCOUNTER_7
     }
 }
 
 export const levelCounter_8 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-8'
+        type: LEVELCOUNTER_8
     }
 }
 
 export const levelCounter_9 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-9'
+        type: LEVELCOUNTER_9
     }
 }
 
 export const levelCounter_10 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-10'
+        type: LEVELCOUNTER_10
     }
 }
 
 export const levelCounter_11 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-11'
+        type: LEVELCOUNTER_11
     }
 }
 
 export const levelCounter_12 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-12'
+        type: LEVELCOUNTER_12
     }
 }
 
 export const levelCounter_13 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-13'
+        type: LEVELCOUNTER_13
     }
 }
 
 export const levelCounter_14 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-14'
+        type: LEVELCOUNTER_14
     }
 }
 
 export const levelCounter_15 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-15'
+        type: LEVELCOUNTER_15
     }
 }
 
 export const levelCounter_16 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-16'
+        type: LEVELCOUNTER_16
     }
 }
 
 export const levelCounter_17 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-17'
+        type: LEVELCOUNTER_17
     }
 }
 
 export const levelCounter_18 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-18'
+        type: LEVELCOUNTER_18
     }
 }
 
 export const levelCounter_19 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-19'
+        type: LEVELCOUNTER_19
     }
 }
 
 export const levelCounter_20 = () => {
     return {
-        levelCounterBackground: 'LevelCounter-20'
+        type: LEVELCOUNTER_20
     }
 }

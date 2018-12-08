@@ -7,6 +7,8 @@ import { computerRedInput, computerGreenInput, computerBlueInput, computerPurple
 import { computersTurn, playersTurn } from '../actions/TurnActions';
 import { clearPlayerInput } from '../actions/PlayerInputActions';
 
+import { levelCounter_1 } from '../actions/LevelCounterBackgroundActions';
+
 import simonSound1 from '../sounds/simonSound1.mp3';
 import simonSound2 from '../sounds/simonSound2.mp3';
 import simonSound3 from '../sounds/simonSound3.mp3';
@@ -52,7 +54,12 @@ class StartButton extends Component {
     initialComputersTurn(){
         setTimeout(() => {
             /* increment levelCounter & change levelCounter background color */
-            store.dispatch(incrementLevelCounter());   
+            store.dispatch(incrementLevelCounter());
+
+            setTimeout(() => {
+                store.dispatch(levelCounter_1());
+            }, 100);
+
         }, 500);
      
         setTimeout(() => {
@@ -128,7 +135,9 @@ class StartButton extends Component {
 export const mapStateToProps = (state) => {
     return {
         OnOffSwitch: state.OnOffSwitchReducer.on,
-        turn: state.TurnReducer.turn
+        turn: state.TurnReducer.turn,
+        levelCounter: state.LevelCounterReducer.levelCounter,
+        levelCounterBackground: state.LevelCounterBackgroundReducer.levelCounterBackground
     }
 }
 

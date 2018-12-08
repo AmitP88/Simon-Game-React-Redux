@@ -24,6 +24,30 @@ import { clearComputerInput } from '../actions/ComputerInputActions';
 
 import { simon, simonWrongMove } from '../actions/SimonActions';
 
+import {
+    levelCounter_default,
+    levelCounter_1,
+    levelCounter_2,
+    levelCounter_3,
+    levelCounter_4,
+    levelCounter_5,
+    levelCounter_6,
+    levelCounter_7,
+    levelCounter_8,
+    levelCounter_9,
+    levelCounter_10,
+    levelCounter_11,
+    levelCounter_12,
+    levelCounter_13,
+    levelCounter_14,
+    levelCounter_15,
+    levelCounter_16,
+    levelCounter_17,
+    levelCounter_18,
+    levelCounter_19,
+    levelCounter_20
+} from '../actions/LevelCounterBackgroundActions';
+
 import simonSound1 from '../sounds/simonSound1.mp3';
 import simonSound2 from '../sounds/simonSound2.mp3';
 import simonSound3 from '../sounds/simonSound3.mp3';
@@ -48,6 +72,74 @@ class LightsSquare extends Component {
         setTimeout(() => {
             /* increment levelCounter & change levelCounter background color */
                 store.dispatch(incrementLevelCounter());
+
+                setTimeout(() => {
+                    switch(this.props.levelCounter){
+                        case 1:
+                            store.dispatch(levelCounter_1());
+                            break;
+                        case 2:
+                            store.dispatch(levelCounter_2());
+                            break;
+                        case 3:
+                            store.dispatch(levelCounter_3());
+                            break;
+                        case 4:
+                            store.dispatch(levelCounter_4());
+                            break;
+                        case 5:
+                            store.dispatch(levelCounter_5());
+                            break;
+                        case 6:
+                            store.dispatch(levelCounter_6());
+                            break;
+                        case 7:
+                            store.dispatch(levelCounter_7());
+                            break;
+                        case 8:
+                            store.dispatch(levelCounter_8());
+                            break;
+                        case 9:
+                            store.dispatch(levelCounter_9());
+                            break;
+                        case 10:
+                            store.dispatch(levelCounter_10());
+                            break;
+                        case 11:
+                            store.dispatch(levelCounter_11());
+                            break;
+                        case 12:
+                            store.dispatch(levelCounter_12());
+                            break;
+                        case 13:
+                            store.dispatch(levelCounter_13());
+                            break;
+                        case 14:
+                            store.dispatch(levelCounter_14());
+                            break;
+                        case 15:
+                            store.dispatch(levelCounter_15());
+                            break;
+                        case 16:
+                            store.dispatch(levelCounter_16());
+                            break;
+                        case 17:
+                            store.dispatch(levelCounter_17());
+                            break;
+                        case 18:
+                            store.dispatch(levelCounter_18());
+                            break;
+                        case 19:
+                            store.dispatch(levelCounter_19());
+                            break;
+                        case 20:
+                            store.dispatch(levelCounter_20());
+                            break;
+                        default:
+                            store.dispatch(levelCounter_default());
+                            break;
+                    }
+                }, 100);
         }, 1000);
 
         setTimeout(() => {
@@ -281,7 +373,8 @@ export const mapStateToProps = (state) => {
         turn: state.TurnReducer.turn,
         computerInput: state.ComputerInputReducer.computerInput,
         playerInput: state.PlayerInputReducer.playerInput,
-        hardmode: state.HardModeReducer.hardmode
+        hardmode: state.HardModeReducer.hardmode,
+        levelCounter: state.LevelCounterReducer.levelCounter
     }
 }
 
