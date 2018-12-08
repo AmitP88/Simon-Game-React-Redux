@@ -24,6 +24,8 @@ import { clearComputerInput } from '../actions/ComputerInputActions';
 
 import { simon, simonWrongMove } from '../actions/SimonActions';
 
+import { simonMessageDefault ,simonMessageVictory } from '../actions/SimonMessageActions';
+
 import {
     levelCounter_default,
     levelCounter_1,
@@ -338,6 +340,7 @@ class LightsSquare extends Component {
                         console.log('Victory Achieved!');
 
                         const victory = () => {
+                            store.dispatch(simonMessageVictory());
                             setTimeout(() => {
                                 store.dispatch(redClicked());
                             }, 200);
@@ -363,6 +366,7 @@ class LightsSquare extends Component {
 
 
                        setTimeout(() => {
+                            store.dispatch(simonMessageDefault());
                             store.dispatch(blueReverted());
                             store.dispatch(resetLevelCounter());
                             store.dispatch(levelCounter_default());                            

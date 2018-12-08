@@ -9,6 +9,7 @@ import ComputerInputReducer from '../reducers/ComputerInputReducer';
 import HardModeReducer from '../reducers/HardModeReducer';
 import SimonReducer from '../reducers/SimonReducer';
 import LevelCounterBackgroundReducer from '../reducers/LevelCounterBackgroundReducer';
+import SimonMessageReducer from '../reducers/SimonMessageReducer';
 import thunk from 'redux-thunk';
 
 export const initialState = {
@@ -26,6 +27,7 @@ export const initialState = {
     },
     turn: 'computer',
     Simon: 'Simon',
+    SimonMessage: 'Simon',
     levelCounterBackground: 'LevelCounter'
 };
 
@@ -40,7 +42,8 @@ export const store = createStore(
         ComputerInputReducer,
         HardModeReducer,
         SimonReducer,
-        LevelCounterBackgroundReducer
+        LevelCounterBackgroundReducer,
+        SimonMessageReducer
     }),
     applyMiddleware(thunk)
 );
