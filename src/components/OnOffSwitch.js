@@ -3,6 +3,8 @@ import store from '../store/store';
 import { turnOn, turnOff } from '../actions/OnOffSwitchActions';
 import { resetLevelCounter } from '../actions/LevelCounterActions';
 import { levelCounter_default } from '../actions/LevelCounterBackgroundActions';
+import { clearComputerInput } from '../actions/ComputerInputActions';
+import { clearPlayerInput } from '../actions/PlayerInputActions';
 import { computersTurn } from '../actions/TurnActions';
 
 class OnOffSwitch extends Component {
@@ -18,6 +20,8 @@ class OnOffSwitch extends Component {
             store.dispatch(turnOff());
             store.dispatch(resetLevelCounter());
             store.dispatch(levelCounter_default());
+            store.dispatch(clearComputerInput());
+            store.dispatch(clearPlayerInput());
             store.dispatch(computersTurn());
         }        
     }
