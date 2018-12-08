@@ -8,6 +8,7 @@ import { computersTurn, playersTurn } from '../actions/TurnActions';
 import { clearPlayerInput } from '../actions/PlayerInputActions';
 
 import { levelCounter_1 } from '../actions/LevelCounterBackgroundActions';
+import { counterBelow10 } from '../actions/CounterClassActions';
 
 import simonSound1 from '../sounds/simonSound1.mp3';
 import simonSound2 from '../sounds/simonSound2.mp3';
@@ -109,6 +110,7 @@ class StartButton extends Component {
         store.dispatch(clearPlayerInput());
         store.dispatch(clearComputerInput());
         store.dispatch(resetLevelCounter());
+        store.dispatch(counterBelow10());
         store.dispatch(computersTurn());
         setTimeout(() => {
             if(this.props.OnOffSwitch && this.props.turn === 'computer'){
