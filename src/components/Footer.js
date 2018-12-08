@@ -11,7 +11,7 @@ class Footer extends Component {
             Built with <Tooltip content="React"><img src={react} className="App-logo" alt="logo" /></Tooltip><Tooltip content="Redux"><img src={redux} className="App-logo" alt="logo" /></Tooltip>
           </div>
             
-            <a href="https://github.com/AmitP88/Tic-Tac-Toe-React-Redux" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/AmitP88/Simon-Game-React-Redux" target="_blank" rel="noopener noreferrer">
             <i className="fa fa-github fa-4x"></i>
             </a>      
             <p className="developedBy">Developed by <a href="https://github.com/AmitP88" target="_blank" rel="noopener noreferrer" className="github-profile-link">Amit Patel</a></p>      
