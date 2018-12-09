@@ -7,7 +7,7 @@ or download and follow the npm instructions below
 
 ![screenShot1](https://github.com/AmitP88/Simon-Game-React-Redux/blob/master/Screenshot1.png)
 
-![screenShot2](https://github.com/AmitP88/Simon-Game-React-Redux/blob/master/Screenshot2.png)
+
 
 ## To play locally:
 1. Download the game by clicking the green button on the repository
