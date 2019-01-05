@@ -13,4 +13,5 @@ or download and follow the npm instructions below
 1. Download the game by clicking the green button on the repository
 2. Unzip the downloaded game using WinRaR
 3. Open up your terminal and navigate to the game folder
-4. Run npm start and play!
+4. run `npm install` to create node_modules folder for dependencies 
+5. Run `npm start` and play!
