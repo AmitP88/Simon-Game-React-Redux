@@ -4,9 +4,17 @@
     width: 560px;
     margin: 0 auto;
   }
+
+  p {
+    font-weight: bold;
+    color: cornflowerblue;
+  }
   
   .builtWith {
     font-weight: bold;
+    margin-bottom: 15%;
+    margin-left: 5%;
+    color: cornflowerblue;
   }
   
   .fa-github {
@@ -18,16 +26,17 @@
   }
   
   .fa-github:hover {
-    color: rgb(85, 26, 139);
+    color: lightgreen;
   }
   
   .github-profile-link {
     text-decoration-line: none;
     font-weight: bold;
+    color: aqua;
   }
   
   .github-profile-link:hover {
-    color: blue;
+    color: lightgreen;
   }
   
   .App-logo {
