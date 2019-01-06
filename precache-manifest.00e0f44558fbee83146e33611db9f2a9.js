@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/Simon-Game-React-Redux/static/css/1.7aa6a71f.chunk.css"
   },
   {
-    "revision": "b2b83ab298deab54afa602d4de1dfcb2",
+    "revision": "71c5093f6c8f7ff0ffa5c4c8b30001c1",
     "url": "/Simon-Game-React-Redux/index.html"
   }
 ];
