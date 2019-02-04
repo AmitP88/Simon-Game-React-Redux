@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Simon-Game-React-Redux/static/media/simonSound4.f4a912ee.mp3"
   },
   {
-    "revision": "281006edea5a358ff37d",
-    "url": "/Simon-Game-React-Redux/static/css/main.5720f4b6.chunk.css"
+    "revision": "6848e367d2138541dc3b",
+    "url": "/Simon-Game-React-Redux/static/css/main.a2bab94f.chunk.css"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/Simon-Game-React-Redux/static/media/simonSound3.f3c18b98.mp3"
   },
   {
-    "revision": "281006edea5a358ff37d",
-    "url": "/Simon-Game-React-Redux/static/js/main.281006ed.chunk.js"
+    "revision": "6848e367d2138541dc3b",
+    "url": "/Simon-Game-React-Redux/static/js/main.6848e367.chunk.js"
   },
   {
     "revision": "319affeb3e9915a4de6785cdb0c8d355",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/Simon-Game-React-Redux/static/css/1.7aa6a71f.chunk.css"
   },
   {
-    "revision": "71c5093f6c8f7ff0ffa5c4c8b30001c1",
+    "revision": "7edc0a2e65b78076c9fcfa37815b9ed3",
     "url": "/Simon-Game-React-Redux/index.html"
   }
 ];
