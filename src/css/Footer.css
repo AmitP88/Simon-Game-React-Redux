@@ -13,8 +13,10 @@
   .builtWith {
     font-weight: bold;
     margin-bottom: 15%;
-    margin-left: 5%;
+    margin-left: 25%;
     color: cornflowerblue;
+    display: flex;
+    align-items: center;
   }
   
   .fa-github {
