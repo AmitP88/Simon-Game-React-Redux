@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Simon-Game-React-Redux/precache-manifest.116ac81461b043ede37cadf9e30be22c.js"
+  "/Simon-Game-React-Redux/precache-manifest.3583a13793c3f7897b02eaef6bd7276e.js"
 );
 
 workbox.clientsClaim();

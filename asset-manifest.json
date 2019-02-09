@@ -1,7 +1,7 @@
 {
-  "main.css": "/Simon-Game-React-Redux/static/css/main.3a4fb453.chunk.css",
-  "main.js": "/Simon-Game-React-Redux/static/js/main.0d15f567.chunk.js",
-  "main.js.map": "/Simon-Game-React-Redux/static/js/main.0d15f567.chunk.js.map",
+  "main.css": "/Simon-Game-React-Redux/static/css/main.c3c690e0.chunk.css",
+  "main.js": "/Simon-Game-React-Redux/static/js/main.531008df.chunk.js",
+  "main.js.map": "/Simon-Game-React-Redux/static/js/main.531008df.chunk.js.map",
   "static/css/1.7aa6a71f.chunk.css": "/Simon-Game-React-Redux/static/css/1.7aa6a71f.chunk.css",
   "static/js/1.b4220a18.chunk.js": "/Simon-Game-React-Redux/static/js/1.b4220a18.chunk.js",
   "static/js/1.b4220a18.chunk.js.map": "/Simon-Game-React-Redux/static/js/1.b4220a18.chunk.js.map",
@@ -13,9 +13,9 @@
   "static/media/redux.svg": "/Simon-Game-React-Redux/static/media/redux.319affeb.svg",
   "static/media/font-awesome.min.css": "/Simon-Game-React-Redux/static/media/fontawesome-webfont.912ec66d.svg",
   "static/media/simonSound2.mp3": "/Simon-Game-React-Redux/static/media/simonSound2.c3c86e71.mp3",
-  "static/css/main.3a4fb453.chunk.css.map": "/Simon-Game-React-Redux/static/css/main.3a4fb453.chunk.css.map",
+  "static/css/main.c3c690e0.chunk.css.map": "/Simon-Game-React-Redux/static/css/main.c3c690e0.chunk.css.map",
   "static/css/1.7aa6a71f.chunk.css.map": "/Simon-Game-React-Redux/static/css/1.7aa6a71f.chunk.css.map",
   "index.html": "/Simon-Game-React-Redux/index.html",
-  "precache-manifest.116ac81461b043ede37cadf9e30be22c.js": "/Simon-Game-React-Redux/precache-manifest.116ac81461b043ede37cadf9e30be22c.js",
+  "precache-manifest.3583a13793c3f7897b02eaef6bd7276e.js": "/Simon-Game-React-Redux/precache-manifest.3583a13793c3f7897b02eaef6bd7276e.js",
   "service-worker.js": "/Simon-Game-React-Redux/service-worker.js"
 }
